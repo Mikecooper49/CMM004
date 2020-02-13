@@ -11,7 +11,7 @@ index.php - login page
 -->
 <?php
 
-include_once("resources/config.php");
+include_once("config.php");
 //include_once("resources/session.php");
 
 ?>
@@ -50,14 +50,6 @@ include_once("resources/config.php");
         </div>
     </div>
 </div>
-
-<!-- footer -->
-
-<footer id="footer">
-    <?php
-    require("resources/footer.php");
-    ?>
-</footer>
 
 </body>
 
