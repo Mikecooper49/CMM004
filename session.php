@@ -33,16 +33,14 @@ if(!empty($_POST["rememberme"])) {
     setcookie('username',"");
     setcookie('password',"");
 
-}
 
+    // get data from Users table in database
 
-    // get data from customers table in kfphoto database
-
-    $sql = "SELECT *  FROM customers WHERE name = '$myusername' AND password = '$mypassword' ";
+    $sql = "SELECT *  FROM Users WHERE name = '$myusername' AND password = '$mypassword' ";
     $result = mysqli_query($db, $sql);
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
     $active = $row['active'];
-    $customer_type = $row['customer_type'];
+    $user_type = $row['user_type'];
 
     $count = mysqli_num_rows($result);
 
@@ -50,7 +48,7 @@ if(!empty($_POST["rememberme"])) {
 
     if ($count == 1) {
         $_SESSION['username'] = $myusername;
-        $_SESSION['customer_type'] = $customer_type;
+        $_SESSION['user_type'] = $customer_type;
         $_SESSION['password'] = $mypassword;
         header("location:../homepage.php");
     } else {
