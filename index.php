@@ -1,7 +1,7 @@
 <!--
             ISa
 
-Created by Mike Cooper (1808760) for module CMM004
+Created by for module CMM004
 Date: Feb 2020
 
 This app uses sql database
