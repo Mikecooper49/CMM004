@@ -6,12 +6,15 @@ Date: Feb 2020
 
 This app uses sql database
 
-index.php - login page
+index.php - login page for IntStu database
 
 -->
 <?php
 
-include_once("config.php");
+// using my home setup & database to start with (config.php) will be the RGU setup
+
+include_once("config_home.php");
+
 //include_once("resources/session.php");
 
 ?>
@@ -20,13 +23,16 @@ include_once("config.php");
 <html lang="en">
 <head>
     <title>Login Page</title>
-    <link rel="stylesheet" type="text/css" href="resources/style/style.css">
+
+   <!-- we need to chose between an off the shelf style set up like bootstrap or write one ourselves -->
+
+ <!--  <link rel="stylesheet" type="text/css" href="resources/style/style.css"> -->
 
 </head>
 
-<!-- background photo -->
+<!-- background photo for login page?-->
 
-<body class="bg" background="resources/images/login_pic.jpg">
+<!-- <body class="bg" background="resources/images/login_pic.jpg"> -->
 
 <!-- login box and check/set login cookie -->
 
@@ -36,7 +42,7 @@ include_once("config.php");
         <div style="margin:20px 20px">
 
             <div class="loginbox" align="right">
-                <form action="resources/session.php" method="post">
+                <form action="session.php" method="post">
                     <label> Email : </label><input type="text" name="username" value="<?php if(isset($_COOKIE['username'])) { echo $_COOKIE['username']; } ?>" class="box"><br><br>
                     <label> Password : </label><input type="password" name="password" value="<?php if(isset($_COOKIE['password'])) { echo $_COOKIE['password']; } ?>" class="box"><br><br>
                     Remember Me: <input type="checkbox" name="rememberme" class="box"><br><br>

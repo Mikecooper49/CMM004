@@ -9,7 +9,10 @@ session.php (validates username and password, sets session variables and custome
 <?php
 
 session_start();
-include_once('config.php');
+
+// using home database for initial testing
+
+include_once('config_home.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -48,7 +51,7 @@ if(!empty($_POST["rememberme"])) {
 
     if ($count == 1) {
         $_SESSION['username'] = $myusername;
-        $_SESSION['user_type'] = $customer_type;
+        $_SESSION['user_type'] = $user_type;
         $_SESSION['password'] = $mypassword;
         header("location:../homepage.php");
     } else {
