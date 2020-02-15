@@ -3,7 +3,10 @@
 Created for module CMM04
 Date: Feb 2020
 This app uses the sql database
-session.php (validates username and password, sets session variables and customer cookies)
+session.php (validates username and password, sets session variables and user cookies)
+
+Need to publish cookie policy on login page
+
 -->
 
 <?php
@@ -33,11 +36,11 @@ if(!empty($_POST["rememberme"])) {
     setcookie ('password',$_POST['password'],time()+ 86400); // set time limit to 1 day (we cna change this)
 
 } else {
-    setcookie('username',"");
-    setcookie('password',"");
+    setcookie('username', "");
+    setcookie('password', "");
 
-
-    // get data from Users table in database
+}
+    // get data from Users table in sql database
 
     $sql = "SELECT *  FROM Users WHERE name = '$myusername' AND password = '$mypassword' ";
     $result = mysqli_query($db, $sql);
@@ -47,7 +50,7 @@ if(!empty($_POST["rememberme"])) {
 
     $count = mysqli_num_rows($result);
 
-    // If result matched $myusername and $mypassword, table row must be 1 row and set user type (Admin or customer)
+    // If result matched $myusername and $mypassword, table row must be 1 row and set user type (Admin, User or Reg_User)
 
     if ($count == 1) {
         $_SESSION['username'] = $myusername;

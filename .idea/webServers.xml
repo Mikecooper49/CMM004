@@ -2,8 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="a018569b-97c7-4dcc-ba8a-44b2a40235c7" name="MAMP Apache" url="http://localhost">
-        <fileTransfer port="0" mountedRoot="/Applications/MAMP/htdocs" accessType="MOUNT" />
+      <webServer id="a018569b-97c7-4dcc-ba8a-44b2a40235c7" name="MAMP Apache" url="http://localhost:8888">
+        <fileTransfer port="0" mountedRoot="/Applications/MAMP/db/mysql57" accessType="MOUNT" />
       </webServer>
     </option>
   </component>
