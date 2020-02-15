@@ -20,7 +20,7 @@ include_once('config_home.php');
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // username, password sent from login form on index.php
-    echo "Hello";
+
 
 if (!empty($_POST['username']))
 {
@@ -56,7 +56,9 @@ if(!empty($_POST["rememberme"])) {
         $_SESSION['username'] = $myusername;
         $_SESSION['user_type'] = $user_type;
         $_SESSION['password'] = $mypassword;
-        header("location:../homepage.php");
+        // check login working before homepage is made
+        echo " login worked";
+        // header("location:../homepage.php");
     } else {
         $error = "Your Login Name or Password is invalid please try again";
     }

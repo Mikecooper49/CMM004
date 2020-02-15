@@ -15,7 +15,7 @@ index.php - login page for IntStu database
 
 include_once("config_home.php");
 
-//include_once("resources/session.php");
+include_once("session.php");
 
 ?>
 
