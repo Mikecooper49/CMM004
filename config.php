@@ -1,7 +1,7 @@
 
 <!--
              
-Created by Mike Cooper (1808760) for module CMM004
+Created for module CMM004
 Date: Feb 2020
 This app uses the sql database
 config_rgu.php (opens db1808760_databaseat RGU)
