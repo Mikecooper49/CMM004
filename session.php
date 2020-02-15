@@ -1,6 +1,6 @@
 <!--
              Isa
-Created by Mike Cooper (1808760) for module CMM04
+Created for module CMM04
 Date: Feb 2020
 This app uses the sql database
 session.php (validates username and password, sets session variables and customer cookies)
@@ -26,8 +26,8 @@ if (!empty($_POST['username']))
 // check whether cookies are set from login page
 
 if(!empty($_POST["rememberme"])) {
-    setcookie ('username',$_POST['username'],time()+ 86400); // set time limit to 1 day
-    setcookie ('password',$_POST['password'],time()+ 86400); // set time limit to 1 day
+    setcookie ('username',$_POST['username'],time()+ 86400); // set time limit to 1 day (we can change this)
+    setcookie ('password',$_POST['password'],time()+ 86400); // set time limit to 1 day (we cna change this)
 
 } else {
     setcookie('username',"");
