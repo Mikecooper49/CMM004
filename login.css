@@ -1,0 +1,19 @@
+body {
+    max-width: 100%;
+    height: 900px;
+    background-image: url("/images/login2.jpg");
+    background-position: center;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+h1 {
+    color: blue;
+}
+p {
+    color: red;
+}
+
+.loginbox {
+    background-color: darkgray;
+
+}

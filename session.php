@@ -1,67 +1,52 @@
-<!--
-             Isa
-Created for module CMM04
-Date: Feb 2020
-This app uses the sql database
-session.php (validates username and password, sets session variables and user cookies)
-
-Need to publish cookie policy on login page
-
--->
-
 <?php
 
-session_start();
-
-// using home database for initial testing
-
-include_once('config_home.php');
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-    // username, password sent from login form on index.php
-
-
-if (!empty($_POST['username']))
+session_start();    //start a session here in case user login successfully
+if (!IsSet($_POST))                    //if no $_POST array
 {
-        echo "NULL";
-        $myusername = $_POST['username'];
-        $mypassword = $_POST['password'];
-    }
-
-// check whether cookies are set from login page
-
-if(!empty($_POST["rememberme"])) {
-    setcookie ('username',$_POST['username'],time()+ 86400); // set time limit to 1 day (we can change this)
-    setcookie ('password',$_POST['password'],time()+ 86400); // set time limit to 1 day (we cna change this)
-
-} else {
-    setcookie('username', "");
-    setcookie('password', "");
-
-}
-    // get data from Users table in sql database
-
-    $sql = "SELECT *  FROM Users WHERE name = '$myusername' AND password = '$mypassword' ";
-    $result = mysqli_query($db, $sql);
-    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-    $active = $row['active'];
-    $user_type = $row['user_type'];
-
-    $count = mysqli_num_rows($result);
-
-    // If result matched $myusername and $mypassword, table row must be 1 row and set user type (Admin, User or Reg_User)
-
-    if ($count == 1) {
-        $_SESSION['username'] = $myusername;
-        $_SESSION['user_type'] = $user_type;
-        $_SESSION['password'] = $mypassword;
-        // check login working before homepage is made
-        echo " login worked";
-        // header("location:../homepage.php");
-    } else {
-        $error = "Your Login Name or Password is invalid please try again";
-    }
+    session_destroy();                //clear session
+    header("Location: index.php");    //send user back to login page
+    exit();
 }
 
-?>
+if (!IsSet($_POST["user"]) || !IsSet($_POST["password"]))    //if no username or password submitted
+{
+    session_destroy();                //clear session
+    header("Location: index.php");    //send user back to login page
+    exit();
+}
+
+/*
+    I put all accounts into a separate PHP file and include it here.
+    I use "required_once" as the script cannot run without the account information,
+    and I do not want to include it more than once.
+*/
+require_once "accounts.php";
+
+/*
+    This function return true/false for a given username and password.
+    It will only return true if the username-password pair appears in the array
+    defined in "accounts.php".
+*/
+function valid_login($username, $password)
+{
+    global $accounts;                            //$accounts is a global variable
+    //defined in accounts.php, which is included above.
+    if (!IsSet($accounts[$username]))            //check to see if this username has a password
+        return (false);                            //return false if no password exists
+    return ($password == $accounts[$username]);    //use username as index to retreive password
+    //then compare
+}
+
+$username = $_POST["user"];            //get username value submitted by form
+$password = $_POST["password"];        //get password from form
+if (valid_login($username, $password))    //validate login
+{
+    $_SESSION["user"] = $username;    //store username into session variable
+    header("Location: home.php");    //then forward to home page
+    exit();                            //stop PHP script here
+}
+/*
+    So this is unsuccessful login
+*/
+session_destroy();                    //destroy the session
+header("Location: login.php");        //send user back to login page

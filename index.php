@@ -10,49 +10,48 @@ index.php - login page for IntStu database
 
 -->
 <?php
+session_start();
+if (IsSet($_SESSION["username"]))			//if username exists in session, user has logged in
+{
+    header("Location: testhomepage.php");		//forward to use home page
+    exit();
+}
 
 // using my home setup & database to start with (config.php) will be the RGU setup
 
-include_once("config_home.php");
-
-include_once("session.php");
+// include_once("config_home.php");
 
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <title>Login Page</title>
+    <title> Login using PHP</title>
 
    <!-- we need to chose between an off the shelf style set up like bootstrap or write one ourselves -->
 
- <!--  <link rel="stylesheet" type="text/css" href="resources/style/style.css"> -->
+  <link rel="stylesheet" type="text/css" href="login.css">
 
 </head>
 
-<!-- background photo for login page?-->
 
-<!-- <body class="bg" background="resources/images/login_pic.jpg"> -->
+<body
 
 <!-- login box and check/set login cookie -->
 
-<div align="left">
-    <div style="width:400px; border=0;  align=right">
+<div align="center">
+    <div style="width:400px; border=0;  align="right">
 
         <div style="margin:20px 20px">
 
-            <div class="loginbox" align="right">
-                <form action="session.php" method="post">
-                    <label> Email : </label><input type="text" name="username" value="<?php if(isset($_COOKIE['username'])) { echo $_COOKIE['username']; } ?>" class="box"><br><br>
-                    <label> Password : </label><input type="password" name="password" value="<?php if(isset($_COOKIE['password'])) { echo $_COOKIE['password']; } ?>" class="box"><br><br>
+            <div class="loginbox" align="left">
+                <form id = "login" method="post" action="session_old.php">
+                    <label> Email : </label><input type="text" name="username"><br><br>
+                    <label> Password :</label><input type="password" name="password"><br><br>
                     Remember Me: <input type="checkbox" name="rememberme" class="box"><br><br>
-                    <input type="submit" value="Log On">
+                    <button type="submit">Login</button>
                 </form>
             </div>
 
-            <?php if(isset($error)) {
-            echo "<p>Sorry, you're login hasn't worked.<br>
-             Please try again.</p>";}?>
         </div>
     </div>
 </div>
