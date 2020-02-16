@@ -13,49 +13,46 @@ Need to publish cookie policy on login page
 
 session_start();
 
-if (IsSet($_SESSION["username"]))			//if username exists in session, user has logged in
+if (IsSet($_SESSION['username']))			//if username exists in session, user has logged in
 {
-    header("Location: testhomepage.php");		//forward to use home page
+    header("location:testhomepage.php");		//forward to use home page
     exit();
 }
 
 // using home database for initial testing
 
-include_once("config_home.php");
+// include_once("config_home.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "post") {
 
     // username, password sent from login form on index.php
 
- // $myusername = mysqli_real_escape_string($db, $_POST["username"]);
- // $mypassword = mysqli_real_escape_string($db, $_POST["password"]);
+ //$myusername = mysqli_real_escape_string($db, $_POST['username']);
+// $mypassword = mysqli_real_escape_string($db, $_POST['password']);
 
-//{
-    //    echo "NULL - no username posted";
-     $myusername = $_POST["username"];
-     $mypassword = $_POST["password"];
-  //  }
 
-    //
+    $myusername = $_POST['username'];
+    $mypassword = $_POST['password'];
+
 
 // check whether cookies are set from login page
 
 if(!empty($_POST["rememberme"])) {
-    setcookie ("username",$_POST["username"],time()+ 86400); // set time limit to 1 day (we can change this)
-    setcookie ("password",$_POST["password"],time()+ 86400); // set time limit to 1 day (we cna change this)
+    setcookie ('username',$_POST['username'],time()+ 86400); // set time limit to 1 day (we can change this)
+    setcookie ('password',$_POST['password'],time()+ 86400); // set time limit to 1 day (we cna change this)
 
 } else {
-    setcookie("username", "");
-    setcookie("password", "");
+    setcookie('username', "");
+    setcookie('password', "");
 
 }
     // get data from Users table in sql database
 
-    $sql = "SELECT *  FROM Users WHERE 'username'= '$myusername' AND 'password' = '$mypassword' ";
+    $sql = "SELECT *  FROM Users WHERE username = '$myusername' AND password = '$mypassword'";
     $result = mysqli_query($db, $sql);
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-    $active = $row["active"];
-    $user_type = $row["user_type"];
+    $active = $row['active'];
+    $user_type = $row['user_type'];
 
     $count = mysqli_num_rows($result);
 
@@ -66,7 +63,7 @@ if(!empty($_POST["rememberme"])) {
         $_SESSION['user_type'] = $user_type;
         $_SESSION['password'] = $mypassword;
         // direct to homepage
-        header("Location:testhomepage.php");
+        header("location:testhomepage.php");
     } else {
         $error = "Your Login Name or Password is invalid please try again";
     }
