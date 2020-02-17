@@ -9,6 +9,8 @@ config_rgu.php (opens db1808760_databaseat RGU)
 
 <?php
 
+// connection to RGU database and 1808760 db
+
 define('DB_SERVER', 'CSDM-WEBDEV');
 define('DB_USERNAME', '1808760');
 define('DB_PASSWORD', '1808760');

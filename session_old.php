@@ -1,9 +1,9 @@
 <!--
              Isa
-Created for module CMM04
+Created for module CMM004
 Date: Feb 2020
 This app uses the sql database
-session.php (validates username and password, sets session variables and user cookies)
+session_old.php (validates username and password, sets session variables and user cookies)
 
 Need to publish cookie policy on login page
 
@@ -11,7 +11,10 @@ Need to publish cookie policy on login page
 
 <?php
 
-session_start();
+// connect as 'root' to database
+
+include_once("config_home.php");
+
 
 if (IsSet($_SESSION['username']))			//if username exists in session, user has logged in
 {
@@ -19,11 +22,13 @@ if (IsSet($_SESSION['username']))			//if username exists in session, user has lo
     exit();
 }
 
+session_start();
+
 // using home database for initial testing
 
-// include_once("config_home.php");
 
-if ($_SERVER["REQUEST_METHOD"] == "post") {
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // username, password sent from login form on index.php
 
@@ -48,10 +53,13 @@ if(!empty($_POST["rememberme"])) {
 }
     // get data from Users table in sql database
 
-    $sql = "SELECT *  FROM Users WHERE username = '$myusername' AND password = '$mypassword'";
+    $sql = "SELECT *  FROM Users WHERE username = '". $myusername . " ' AND password = '". $mypassword ."';";
     $result = mysqli_query($db, $sql);
+    if($result == false) {
+        echo " SQL query didn't work";
+    }
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-    $active = $row['active'];
+    // $active = $row['active'];
     $user_type = $row['user_type'];
 
     $count = mysqli_num_rows($result);

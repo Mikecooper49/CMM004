@@ -17,13 +17,14 @@ if (IsSet($_SESSION['username']))			//if username exists in session, user has lo
     exit();
 }
 
-// using my home setup & database to start with (config.php) will be the RGU setup
+// using my home setup & database to start with (config_rgu.php) will be the RGU setup
 
 // include_once("config_home.php");
 
 ?>
 
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <title> Login using PHP</title>
 
@@ -34,28 +35,31 @@ if (IsSet($_SESSION['username']))			//if username exists in session, user has lo
 </head>
 
 
-<body
+<body class ="bg" background="images/login2.jpg">
 
 <!-- login box and check/set login cookie -->
 
 <div align="center">
-    <div style="width:400px; border=0;  align="right">
+    <h1> Welcome to Aberdeen International Students WebSite</h1>
+    <div style="width:400px; border=20px;  align="right">
 
-        <div style="margin:20px 20px">
 
-            <div class="loginbox" align="left">
-                <form id = "login" method="post" action="session_old.php">
+        <div style="margin:40px 40px">
+
+            <div class="loginbox" align="right">
+                <form action="session_old.php" method="post">
                     <label> Email : </label><input type="text" name="username"><br><br>
                     <label> Password :</label><input type="password" name="password"><br><br>
                     Remember Me: <input type="checkbox" name="rememberme" class="box"><br><br>
                     <button type="submit">Login</button>
                 </form>
             </div>
-
+            <?php if(isset($error)) {
+                echo "Sorry your login didn't work please try again"
+                ;}?>
         </div>
     </div>
 </div>
-
 </body>
 
 <!-- end of body -->

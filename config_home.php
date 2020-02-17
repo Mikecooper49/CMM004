@@ -8,6 +8,8 @@ config_home.php (opens database on home setup)
 
 <?php
 
+// connection to home database credentials
+
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', 'root');
@@ -18,14 +20,4 @@ if ($db->connect_error){
     die("Connection to db failed: " . $db->connect_error);
 }
 
-$sql = "SELECT * FROM Users";
-$result = mysqli_query ($db, $sql);
-
-if (mysqli_num_rows($result) > 0){
-    while ($row = mysqli_fetch_assoc($result)) {
-        echo "id: " . $row["user_id"]. " username " . $row["username"] . "password: " . $row["password"];
-    }
-  } else {
-    echo "not connected ";
-}
 ?>
