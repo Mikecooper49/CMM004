@@ -1,26 +1,16 @@
-<!--
-             Isa
-Created for module CMM004
-Date: Feb 2020
-This app uses the sql database
-session_old.php (validates username and password, sets session variables and user cookies)
-
-Need to publish cookie policy on login page
-
--->
-
 <?php
 
+ob_start();
 // connect as 'root' to database
 
 include_once("config_home.php");
 
 
-if (IsSet($_SESSION['username']))			//if username exists in session, user has logged in
-{
-    header("location:testhomepage.php");		//forward to use home page
-    exit();
-}
+//if (IsSet($_SESSION['username']))			//if username exists in session, user has logged in
+//{
+  //  header("location:homepage.html");		//forward to use home page
+  //  exit();
+//}
 
 session_start();
 
@@ -39,27 +29,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $myusername = $_POST['username'];
     $mypassword = $_POST['password'];
 
-
 // check whether cookies are set from login page
 
-if(!empty($_POST["rememberme"])) {
+//if(!empty($_POST["rememberme"])) {
     setcookie ('username',$_POST['username'],time()+ 86400); // set time limit to 1 day (we can change this)
     setcookie ('password',$_POST['password'],time()+ 86400); // set time limit to 1 day (we cna change this)
 
-} else {
-    setcookie('username', "");
-    setcookie('password', "");
+}// else {
+//    setcookie('username', "");
+   // setcookie('password', "");
 
-}
+//}
     // get data from Users table in sql database
 
-    $sql = "SELECT *  FROM Users WHERE username = '". $myusername . " ' AND password = '". $mypassword ."';";
+    $sql = "SELECT *  FROM Users WHERE username = '$myusername'AND password = '$mypassword'";
     $result = mysqli_query($db, $sql);
-    if($result == false) {
-        echo " SQL query didn't work";
-    }
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-    // $active = $row['active'];
+    $active = $row['active'];
     $user_type = $row['user_type'];
 
     $count = mysqli_num_rows($result);
@@ -67,14 +53,13 @@ if(!empty($_POST["rememberme"])) {
     // If result matched $myusername and $mypassword, table row must be 1 row and set user type (Admin, User or Reg_User)
 
     if ($count == 1) {
-        $_SESSION['username'] = $myusername;
-        $_SESSION['user_type'] = $user_type;
-        $_SESSION['password'] = $mypassword;
-        // direct to homepage
-        header("location:testhomepage.php");
-    } else {
+       $_SESSION['username'] = $myusername;
+       $_SESSION['user_type'] = $user_type;
+       $_SESSION['password'] = $mypassword;
+       header('Location:homepage.php', true,301);
+       ob_end_flush();
+       exit();
+        }
+    else {
         $error = "Your Login Name or Password is invalid please try again";
     }
-}
-
-?>

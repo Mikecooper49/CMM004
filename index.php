@@ -13,7 +13,7 @@ index.php - login page for IntStu database
 session_start();
 if (IsSet($_SESSION['username']))			//if username exists in session, user has logged in
 {
-    header("Location:testhomepage.php");		//forward to use home page
+    header("Location:homepage.php");		//forward to use home page
     exit();
 }
 

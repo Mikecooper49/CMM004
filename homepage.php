@@ -1,16 +1,15 @@
 <?php
-
-
-//include("config_home.php");
-//include("session_old.php");
-
+session_start();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title> Homepage Test - checking login successful</title>
     login success !
 </head>
+<body>
 
+<p>print some text</p>
+</body>
 
+</html>
