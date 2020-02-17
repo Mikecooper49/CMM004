@@ -11,11 +11,9 @@ config_rgu.php (opens db1808760_databaseat RGU)
 
 // connection to RGU database and 1808760 db
 
-define('DB_SERVER', 'CSDM-WEBDEV');
-define('DB_USERNAME', '1808760');
-define('DB_PASSWORD', '1808760');
-define('DB_DATABASE', 'db1808760_database');
-$db = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
-
+$dbHost="localhost";			//MySQL host
+$dbUser="0903777";			//MySQL username
+$dbPassword="0903777";		//MySQL user password
+$dbDatabase="db0903777_CMM004";		//MySQL database name
 ?>
 
