@@ -1,6 +1,5 @@
 <?php
 
-ob_start();
 // connect as 'root' to database
 
 include_once("config_home.php");
@@ -18,11 +17,11 @@ session_start();
 
 
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST")
 
-    // username, password sent from login form on index.php
+    //username, password sent from login form on index.php
 
- //$myusername = mysqli_real_escape_string($db, $_POST['username']);
+    //$myusername = mysqli_real_escape_string($db, $_POST['username']);
 // $mypassword = mysqli_real_escape_string($db, $_POST['password']);
 
 
@@ -31,15 +30,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 // check whether cookies are set from login page
 
-//if(!empty($_POST["rememberme"])) {
-    setcookie ('username',$_POST['username'],time()+ 86400); // set time limit to 1 day (we can change this)
-    setcookie ('password',$_POST['password'],time()+ 86400); // set time limit to 1 day (we cna change this)
+    if (!empty($_POST["rememberme"])) {
+        setcookie('username', $_POST['username'], time() + 86400); // set time limit to 1 day (we can change this)
+        setcookie('password', $_POST['password'], time() + 86400); // set time limit to 1 day (we cna change this)
 
-}// else {
-//    setcookie('username', "");
-   // setcookie('password', "");
+    } else {
+        setcookie('username', "");
+        setcookie('password', "");
 
-//}
+    }
     // get data from Users table in sql database
 
     $sql = "SELECT *  FROM Users WHERE username = '$myusername'AND password = '$mypassword'";
@@ -53,13 +52,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // If result matched $myusername and $mypassword, table row must be 1 row and set user type (Admin, User or Reg_User)
 
     if ($count == 1) {
-       $_SESSION['username'] = $myusername;
-       $_SESSION['user_type'] = $user_type;
-       $_SESSION['password'] = $mypassword;
-       header('Location:homepage.php', true,301);
-       ob_end_flush();
-       exit();
-        }
-    else {
-        $error = "Your Login Name or Password is invalid please try again";
+        $_SESSION['username'] = $myusername;
+        $_SESSION['user_type'] = $user_type;
+        $_SESSION['password'] = $mypassword;
+        header('Location:homepage.php', true, 301);
+        exit();
+    } else {
+        $error = 'Your login failed please try again';
+        header('Location:index.php', true, 301);
+        exit();
     }

@@ -1,22 +1,5 @@
-<!--
-            ISa
-
-Created by for module CMM004
-Date: Feb 2020
-
-This app uses sql database
-
-index.php - login page for IntStu database
-
--->
 <?php
 session_start();
-if (IsSet($_SESSION['username']))			//if username exists in session, user has logged in
-{
-    header("Location:homepage.php");		//forward to use home page
-    exit();
-}
-
 // using my home setup & database to start with (config_rgu.php) will be the RGU setup
 
 // include_once("config_home.php");
