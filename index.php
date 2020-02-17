@@ -26,7 +26,7 @@ if (IsSet($_SESSION['username']))			//if username exists in session, user has lo
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title> Login using PHP</title>
+    <title> Login front page</title>
 
    <!-- we need to chose between an off the shelf style set up like bootstrap or write one ourselves -->
 
@@ -40,7 +40,7 @@ if (IsSet($_SESSION['username']))			//if username exists in session, user has lo
 <!-- login box and check/set login cookie -->
 
 <div align="center">
-    <h1> Welcome to Aberdeen International Students WebSite</h1>
+    <h1> Welcome to International Students of Aberdeen WebSite (ISa)</h1>
     <div style="width:400px; border=20px;  align="right">
 
 
