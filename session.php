@@ -1,15 +1,15 @@
 <?php
 
-// connect as 'root' to database
+// connect to database
 
-include_once("config_home.php");
+include_once("config_rgu.php");
 
 
-//if (IsSet($_SESSION['username']))			//if username exists in session, user has logged in
-//{
-  //  header("location:homepage.html");		//forward to use home page
-  //  exit();
-//}
+if (IsSet($_SESSION['username']))			//if username exists in session, user has logged in
+{
+   header('Location:homepage.php', true, 301);		//forward to use home page
+   exit();
+}
 
 session_start();
 
