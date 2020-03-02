@@ -38,6 +38,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
         setcookie('username', "");
         setcookie('password', "");
 
+        // trying code for prepared statements to secure db
+
+        $stmt = $db->prepare("SELECT * FROM Users WHERE username =? AND password=?");
+        $stmt->bindParam("ss", $username, $password);
+        $stmt->execute();
+        $result=$stmt->get_result();
+        if($result->num_rows==1)
+        {
+            $row=$result->fetch_assoc();
+
+        }
+
     }
     // get data from Users table in sql database
 

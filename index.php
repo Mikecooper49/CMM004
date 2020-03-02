@@ -26,7 +26,7 @@ session_start();
         <div style="margin:40px 40px">
 
             <div class="loginbox" align="right">
-                <form action="session.php" method="post">
+                <form action="session_bind.php" method="post">
                     <label> Email : </label><input type="text" name="username"><br><br>
                     <label> Password :</label><input type="password" name="password"><br><br>
                     Remember Me: <input type="checkbox" name="rememberme" class="box"><br><br>
