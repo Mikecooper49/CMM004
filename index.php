@@ -1,7 +1,10 @@
 <?php
-session_start();
-?>
 
+// start session
+
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,12 +33,18 @@ session_start();
                     <label> Email : </label><input type="text" name="username"><br><br>
                     <label> Password :</label><input type="password" name="password"><br><br>
                     Remember Me: <input type="checkbox" name="rememberme" class="box"><br><br>
-                    <button type="submit">Login</button>
+                    <button type="submit">Login</button><br><br>
+                    <?php
+                    // display login error message if set in session
+                    if (isset($_SESSION['message']))
+                    {
+                        echo $_SESSION['message'];
+                        unset($_SESSION['message']);
+                    }
+                    ?>
                 </form>
             </div>
-            <?php if(isset($error)) {
-                echo "Sorry your login didn't work please try again"
-                ;}?>
+
         </div>
     </div>
 </div>
