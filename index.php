@@ -30,8 +30,8 @@ session_start();
 
             <div class="loginbox" align="right">
                 <form action="session.php" method="post">
-                    <label> Email : </label><input type="text" name="username"><br><br>
-                    <label> Password :</label><input type="password" name="password"><br><br>
+                    <label> Email : </label><input type="email" name="username"><br><br>
+                    <label> Password :</label><input type="password" name="password" required minlength="5"><br><br>
                     Remember Me: <input type="checkbox" name="rememberme" class="box"><br><br>
                     <button type="submit">Login</button><br><br><br>
                     <?php
