@@ -12,7 +12,7 @@ include_once("resources/includes/config_home.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    //username, password POSTED from login form on index.php
+    //username, password POSTED from login form on login.php
 
     $myusername = $_POST['username'];
     $mypassword = $_POST['password'];
@@ -37,16 +37,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $stmt->get_result();
     if ($result->num_rows == 1) {
         $row = $result->fetch_assoc();
+
+        // set username, password and user_type into session file
+
         $_SESSION['username'] = $myusername;
         $_SESSION['user_type'] = $user_type;
         $_SESSION['password'] = $mypassword;
-        header('Location:home.html', true, 301);
+        header('Location:index.html', true, 301);
         exit();
     }
     else {
         // set login fail message
+
         $_SESSION['message'] = "Sorry your login has failed please try again";
-        header('Location:index.php', true, 301);
+        header('Location:login.php', true, 301);
         exit();
 
 

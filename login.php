@@ -12,12 +12,12 @@ session_start();
 
    <!-- we need to chose between an off the shelf style set up like bootstrap or write one ourselves -->
 
-  <link rel="stylesheet" type="text/css" href="resources/styles/login.css">
+  <link rel="stylesheet" type="text/css" href="resources/styles/style.css">
 
 </head>
 
 
-<body class ="bg" background="resources/images/login2.jpg">
+<body class ="bg_login" background="resources/images/login2.jpg">
 
 <!-- login box and check/set login cookie -->
 
