@@ -45,8 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['password'] = $mypassword;
         header('Location:index.html', true, 301);
         exit();
-    }
-    else {
+    } else {
         // set login fail message
 
         $_SESSION['message'] = "Sorry your login has failed please try again";

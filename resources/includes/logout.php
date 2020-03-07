@@ -14,5 +14,6 @@ and returns to homepage
 session_start();
 
 if (session_destroy()) {
-    header("Location:../login.php");
+    header("Location:../../index.html");
+    echo 'you have logged out - if in error please log back in';
 }
