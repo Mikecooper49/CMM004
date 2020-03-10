@@ -17,7 +17,7 @@ session_start();
 </head>
 
 
-<body class ="bg_login" background="resources/images/login2.jpg">
+<body class ="bg_login" >
 
 <!-- login box and check/set login cookie -->
 
