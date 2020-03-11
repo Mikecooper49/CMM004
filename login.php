@@ -39,7 +39,13 @@ session_start();
                     <div class="form-row">
                         Remember Me: <input type="checkbox" name="rememberme" class="box">
                     </div>
-                    <button type="submit">Login</button><br><br><br>
+                    <div class="form-row">
+                        <button type="submit">Login</button>
+                    </div>
+                    <div class="form-row">
+                        <a href="register.php">Register as a new user</a>
+                    </div>
+                    <br><br><br>
                     <?php
                     //  login error message if set in session
 

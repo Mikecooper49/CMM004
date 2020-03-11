@@ -27,7 +27,10 @@
                         <label for="confirm">Please confirm your password: </label>
                         <input type="password" name="confirm" id="confirm" placeholder="Confirm Password">
                     </div>
-                    <input type="submit" value="Submit"> <br>
+                    <div class="form-row">
+                        <input type="submit" value="Submit">
+                    </div>
+                    <br>
                     <p hidden="true">  </p>
                 </form>
 
