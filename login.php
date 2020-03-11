@@ -30,9 +30,15 @@ session_start();
 
             <div class="loginbox" align="right">
                 <form action="session.php" method="post">
-                    <label> Email : </label><input type="email" name="username"><br><br>
-                    <label> Password :</label><input type="password" name="password" required minlength="5"><br><br>
-                    Remember Me: <input type="checkbox" name="rememberme" class="box"><br><br>
+                    <div class="form-row">
+                        <label> Email : </label><input type="email" name="username">
+                    </div>
+                    <div class="form-row">
+                        <label> Password :</label><input type="password" name="password" required minlength="5">
+                    </div>
+                    <div class="form-row">
+                        Remember Me: <input type="checkbox" name="rememberme" class="box">
+                    </div>
                     <button type="submit">Login</button><br><br><br>
                     <?php
                     //  login error message if set in session

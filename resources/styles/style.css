@@ -1,5 +1,9 @@
 /* background for login page */
 
+html{
+    font-family: Calibri;
+}
+
 .bg_login{
     max-width: 100%;
     height: 900px;
@@ -58,3 +62,8 @@ footer {
 }
 
 /* end of Jacob's index.html   */
+
+/* Register Form Styling */
+.form-row {
+    margin-bottom: 15px;
+}
