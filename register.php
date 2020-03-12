@@ -40,7 +40,12 @@
                 }
                 if (isset($_GET['emailerr']) && $_GET['emailerr'] == 1)
                 {
-                    echo "Email already registered with us";
+                    echo "Email address already registered with us<br>";
+                    echo "<a href='login.php'>Login? </a>";
+                }
+                if (isset($_GET['emptyerr']) && $_GET['emptyerr'] == 1)
+                {
+                    echo "All fields are required";
                 }
 
                 ?>
