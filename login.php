@@ -23,7 +23,7 @@ session_start();
 
 <div align="center">
     <h1> Welcome to International Students of Aberdeen WebSite (ISa)</h1>
-    <div style="width:400px; border=20px;  align="right">
+    <div style="width:500px; border=20px;  align="right">
 
 
         <div style="margin:40px 40px">
@@ -55,6 +55,11 @@ session_start();
 
                     <div style="color: #0f22ff"><?php echo $_SESSION['message'];?></div>
                     <?php unset($_SESSION['message']);
+                    }
+
+                    if (isset($_GET['usercreated']) && $_GET['usercreated'] == 1)
+                    {
+                        echo "User account has been created, please log in";
                     }
                     ?>
                     <br>

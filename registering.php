@@ -4,7 +4,7 @@ include("resources/includes/config_lynne.php");
 
 
 // Checking that all fields have been filled
-if(empty($_POST['email']) || empty($_POST['password'] || empty($_POST['confirm'])))
+if(empty($_POST['email']) || $_POST['password'] == "" || $_POST['confirm'] == "")
 {
     header('location: register.php?emptyerr=1');
     exit("");
@@ -33,7 +33,7 @@ if (mysqli_num_rows($result) == 1) {
 
          if ($stmt->execute()) {
 
-             header('location: index.html');
+             header('location: login.php?usercreated=1');
          } else {
              echo "Error: " . $stmt . "<br>" . mysqli_error($db);
          }
