@@ -33,6 +33,12 @@
                     <br>
                     <p hidden="true">  </p>
                 </form>
+                <?php
+                if (isset($_GET['messerr']) && $_GET['messerr'] == 1)
+                {
+                    echo "Password and confirm password do not match";
+                }
+                ?>
 
             </div>
 

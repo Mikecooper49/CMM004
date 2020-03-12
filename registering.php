@@ -1,6 +1,6 @@
 <?php
 
-include("resources/includes/config_lynne.php");
+include("resources/includes/config_rgu.php");
 
 
 // Checking that all fields have been filled
@@ -43,8 +43,8 @@ if ($password == $confirm) {
 }else
 {
     //If the passwords do not match, echo out this message
-    header('location: register.php');
-   echo " <h1>Password and confirm password do not match</h1>";
+    header('location: register.php?messerr=1');
+
 }
 
 
