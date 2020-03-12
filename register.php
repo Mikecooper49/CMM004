@@ -38,6 +38,11 @@
                 {
                     echo "Password and confirm password do not match";
                 }
+                if (isset($_GET['emailerr']) && $_GET['emailerr'] == 1)
+                {
+                    echo "Email already registered with us";
+                }
+
                 ?>
 
             </div>
