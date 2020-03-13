@@ -19,25 +19,26 @@
 <main>
     <div align="center">
         <h1>Register to International Students of Aberdeen </h1>
-        <h2> Connecting International Students in Aberdeen</h2>
+
+        <h3 id="required"> * Required fields</h3>
 
         <div style="width:300px; border:20px;  align:right">
             <div class= "loginbox" align="right"  style="margin:40px 40px">
                 <form action="registering.php" method="post">
                     <div class="form-row">
-                        <label for="username">Username: </label> <br>
+                        <label for="username">Username: </label><label id="required">*</label> <br>
                         <input type="text" name="username" id="username" placeholder="Username">
                     </div>
                     <div class="form-row">
-                        <label for="email">Email Address: </label> <br>
+                        <label for="email">Email Address: </label><label id="required">*</label> <br>
                         <input type="email" name="email" id="email" placeholder="Email Address">
                     </div>
                     <div class="form-row">
-                        <label for="password">Password: </label> <br>
+                        <label for="password">Password: </label> <label id="required">*</label><br>
                         <input type="password" name="password" id="password" placeholder="Password">
                     </div>
                     <div class="form-row">
-                        <label for="confirm">Confirm Password: </label> <br>
+                        <label for="confirm">Confirm Password: </label> <label id="required">*</label> <br>
                         <input type="password" name="confirm" id="confirm" placeholder="Confirm Password">
                     </div>
                     <div class="form-row">
@@ -50,14 +51,15 @@
                     </div>
                     <div class="form-row">
                         <label for="nationality">Nationality: </label><br>
-                        <select name = "nationality" id="nationality">
+                        <input type="hidden" name="test" value="nationality">
+                        <select name="nationality" id="nationality">
                             <?php
                             $countries = array("No Nationality", "Azerbaijan", "Bahrain", "Bagladesh", "Botswana", "Brunei", "Cambodia", "Cameroon", "Canada", "China", "Egypt", "Germany", "Ghana", "Hong Kong", "India", "Indonesia", "Iran", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kuwait", "Macau", "Malaysia", "Mauritius", "Mexico", "Namibia", "Nepal", "Nigeria", "Oman", "Pakistan", "Qatar", "Russia", "Rwanda", "Saudi Arabia", "Sierra Leone", "Singapore", "South Africa", "South Korea", "Sri Lanka", "Taiwan", "Tanzania", "Thailand", "Turkey", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "USA", "Vietnam");
 
                             foreach ($countries as $item)
                             {
                                 ?>
-                                <option value="<? echo strtolower($item); ?>"><?php echo $item; ?></option>*
+                                <option value="<?php echo $item; ?>"><?php echo $item; ?></option>
                                 <?php
                             }
 
@@ -85,6 +87,10 @@
                 if (isset($_GET['emptyerr']) && $_GET['emptyerr'] == 1)
                 {
                     echo "All fields are required";
+                }
+                if (isset($_GET['usererr']) && $_GET['usererr'] == 1)
+                {
+                    echo "Username already in use";
                 }
 
                 ?>
