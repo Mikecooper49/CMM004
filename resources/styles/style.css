@@ -28,6 +28,35 @@ p {
     border: 2px black;
 
 }
+/*Nav Bar styling for Register.php */
+nav>ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+    overflow: hidden;
+    background-color: #232323;
+}
+
+nav>ul>li{
+    float: left;
+
+}
+
+nav>ul>li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 30px;
+    text-decoration: none;
+}
+
+#login
+{
+    float: right;
+}
+
+
+
 /* cut from Jacobs index.html */
 
 .navbar {
