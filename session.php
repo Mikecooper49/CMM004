@@ -7,7 +7,7 @@ session_start();
 // connect to database
 // using home database for initial testing
 
-include_once("resources/includes/config_home.php");
+include_once("resources/includes/config_rgu.php");
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     //  prepared statements to secure db
 
-    $stmt = $db->prepare("SELECT * FROM Users WHERE username=? AND password=?");
+    $stmt = $db->prepare("SELECT * FROM users WHERE email=? AND password_text=?");
     $stmt->bind_param("ss", $myusername, $mypassword);
     $stmt->execute();
     $result = $stmt->get_result();
