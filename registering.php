@@ -1,6 +1,6 @@
 <?php
 
-include("resources/includes/config_lynne.php");
+include("resources/includes/config_rgu.php");
 
 
 // Checking that all fields have been filled

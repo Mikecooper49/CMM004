@@ -1,5 +1,5 @@
 <?php
-   include("config_lynne.php");
+   include("resources/includes/config_lynne.php");
     $results = mysqli_query($db, 'SELECT * FROM information');
 ?>
 <!DOCTYPE html>
