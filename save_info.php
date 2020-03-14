@@ -10,9 +10,9 @@ if($_POST){
     $title = $_POST['title'];
     $query = mysqli_query($connection, "INSERT INTO information (title, information) VALUES ('$title', '$info')");
     if($query) {
-        header("Location: index.php");
+        header("Location: OnArrival.php");
     }else{
-        header("Location: index.php");
+        header("Location: OnArrival.php");
     }
 }
     
