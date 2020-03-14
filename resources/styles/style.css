@@ -55,7 +55,10 @@ nav>ul>li a {
     float: right;
 }
 
-
+#required
+{
+    color: red;
+}
 
 /* cut from Jacobs index.html */
 
