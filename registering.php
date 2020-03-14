@@ -1,6 +1,8 @@
 <?php
 
-include("resources/includes/config_lynne.php");
+session_start();
+
+include("resources/includes/config_home.php");
 
 
 // Checking that all fields have been filled
@@ -17,7 +19,7 @@ if(empty($_POST['email']) || $_POST['password'] == "" || $_POST['confirm'] == ""
     $lastname = $_POST['lastname'];
     $nationality = $_POST['nationality'];
     $username = $_POST['username'];
-    $userType = 'USER';
+    $userType = 'REG_USER';
 }
 
 $emailCheck = "SELECT * FROM users WHERE email = '$email'";
@@ -96,4 +98,3 @@ elseif (mysqli_num_rows($userResult) == 1)
      }
 // }
 */
-?>

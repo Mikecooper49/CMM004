@@ -7,32 +7,32 @@ session_start();
 // connect to database
 // using home database for initial testing
 
-include_once("resources/includes/config_rgu.php");
+include_once("resources/includes/config_home.php");
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    //username, password POSTED from login form on login.php
+    //username, password POSTED from login form on login.php and make user_type = 'REG_USER'
 
-    $myusername = $_POST['username'];
-    $mypassword = $_POST['password'];
-    $user_type = "";
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $userType = "REG_USER";
 
 // check whether cookies are set from login page and set cookie if not
 
     if (!empty($_POST["rememberme"])) {
-        setcookie('username', $_POST['username'], time() + 86400); // set time limit to 1 day (we can change this)
+        setcookie('email', $_POST['email'], time() + 86400); // set time limit to 1 day (we can change this)
         setcookie('password', $_POST['password'], time() + 86400); // set time limit to 1 day (we cna change this)
 
     } else {
-        setcookie('username', "");
+        setcookie('email', "");
         setcookie('password', "");
     }
 
     //  prepared statements to secure db
 
     $stmt = $db->prepare("SELECT * FROM users WHERE email=? AND password_text=?");
-    $stmt->bind_param("ss", $myusername, $mypassword);
+    $stmt->bind_param("ss", $email, $password);
     $stmt->execute();
     $result = $stmt->get_result();
     if ($result->num_rows == 1) {
@@ -40,10 +40,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // set username, password and user_type into session file
 
-        $_SESSION['username'] = $myusername;
-        $_SESSION['user_type'] = $user_type;
-        $_SESSION['password'] = $mypassword;
-        header('Location:index.html', true, 301);
+        $_SESSION['email'] = $email;
+        $_SESSION['user_type'] = $userType;
+        $_SESSION['password'] = $password;
+        header('Location:index_navbar.php', true, 301);
         exit();
     } else {
         // set login fail message
