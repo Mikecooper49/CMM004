@@ -1,3 +1,9 @@
+<?php
+session_start();
+print_r($_SESSION);
+include_once("resources/includes/config_home.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,31 +31,41 @@
 
 </head>
 <body>
-
-<?php
-
-include_once('resources/includes/navbarLogic.php');
-
-?>
-<!--<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse">
     <div class="container-fluid">
-        <div class="navbar-header">
+     <!--   <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
             </button>
             <a class="navbar-brand" href="#">Logo</a>
-        </div>
+        </div> -->
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="index.html">Home</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-            </ul>
-        </div>
-    </div>
-</nav> -->
 
-<div class="container-fluid text-center">
+                <!-- set navbar dependent on user_type-->
+
+                <?php
+
+                //testing loop logic
+
+          //     $_SESSION['user_type'] = "ADMIN";
+              //  print_r($_SESSION);
+
+if (isset($_SESSION['user_type'])){
+                    switch ($_SESSION['user_type']) {
+                        case "ADMIN":
+                            include('resources/navbars/admin_navbar.html');
+                            break;
+                        case "REG_USER":
+                            include('resources/navbars/reg_user_navbar.html');
+                            break;
+                }
+                }
+if (!isset($_SESSION['user_type'])){
+                include('resources/navbars/user_navbar.html');
+                }
+                 ?>
+
+                <div class="container-fluid text-center">
     <div class="row content">
         <div class="col-sm-2 sidenav">
             <p><a href="#">Link</a></p>

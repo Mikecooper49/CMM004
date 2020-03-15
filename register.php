@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,8 +22,6 @@
 <main>
     <div align="center">
         <h1>Register to International Students of Aberdeen </h1>
-
-        <h3 id="required"> * Required fields</h3>
 
         <div style="width:300px; border:20px;  align:right">
             <div class= "loginbox" align="right"  style="margin:40px 40px">
@@ -69,7 +70,8 @@
 
                     </div>
                     <div class="form-row">
-                        <input type="submit" value="Sign Up">
+                        <input type="submit" value="Sign Up"><br>
+                        <h3> * Required Field</h3>
                     </div>
                     <br>
 

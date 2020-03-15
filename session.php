@@ -1,22 +1,22 @@
 <?php
-
-// start session
-
 session_start();
-
-// connect to database
-// using home database for initial testing
-
 include_once("resources/includes/config_home.php");
+
+// set user_type
+if ($_SESSION['email'] = "test4@test.com")
+{
+    $_SESSION['user_type'] = 'ADMIN';
+}
+
+    $_SESSION['user_type'] = 'REG_USER';
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    //username, password POSTED from login form on login.php and make user_type = 'REG_USER'
+    //username, password POSTED from login form on login.php
 
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $userType = "REG_USER";
 
 // check whether cookies are set from login page and set cookie if not
 
@@ -41,10 +41,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // set username, password and user_type into session file
 
         $_SESSION['email'] = $email;
-        $_SESSION['user_type'] = $userType;
+      //  $_SESSION['user_type'] = $userType; // either REG_USER or ADMIN
         $_SESSION['password'] = $password;
         header('Location:index_navbar.php', true, 301);
-        exit();
+        //exit();
     } else {
         // set login fail message
 

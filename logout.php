@@ -14,6 +14,7 @@ and returns to homepage
 session_start();
 
 if (session_destroy()) {
-    header("Location:../../index.html");
+    header("Location:../../index_navbar.php");
+    $userType = "USER";
     echo 'you have logged out - if in error please log back in';
 }
