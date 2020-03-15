@@ -3,7 +3,6 @@ session_start();
 print_r($_SESSION);
 include_once("resources/includes/config_home.php");
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,22 +43,7 @@ include_once("resources/includes/config_home.php");
                 <!-- set navbar dependent on user_type-->
 
                 <?php
-
                 include('resources/includes/navbarLogic.php');
-
-/*if (isset($_SESSION['user_type'])){
-                    switch ($_SESSION['user_type']) {
-                        case "ADMIN":
-                            include('resources/navbars/admin_navbar.html');
-                            break;
-                        case "REG_USER":
-                            include('resources/navbars/reg_user_navbar.html');
-                            break;
-                }
-                }
-if (!isset($_SESSION['user_type'])){
-                include('resources/navbars/user_navbar.html');
-                } */
                  ?>
 
                 <div class="container-fluid text-center">

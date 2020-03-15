@@ -1,13 +1,6 @@
 <?php
 session_start();
 print_r($_SESSION);
-if ($_SESSION['email'] == "test4@test.com")
-{
-    $_SESSION['user_type'] = "ADMIN";
-} else {
-    $_SESSION['user_type'] = "REG_USER";
-}
-print_r($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,6 +48,7 @@ print_r($_SESSION);
                     </div>
                     <br><br><br>
                     <?php
+                    $_SESSION['user_type'] = "REG_USER";
                     //  login error message if set in session
 
                     if (isset($_SESSION['message']))

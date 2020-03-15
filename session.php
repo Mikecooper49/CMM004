@@ -3,13 +3,8 @@ session_start();
 include_once("resources/includes/config_home.php");
 
 // set user_type
-if ($_SESSION['email'] == "test4@test.com")
-{
-    $_SESSION['user_type'] = "ADMIN";
-} else {
 
-    $_SESSION['user_type'] = "REG_USER";
-}
+    ($_SESSION['user_type'] = "REG_USER");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -43,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['email'] = $email;
       //  $_SESSION['user_type'] = $userType; // either REG_USER or ADMIN
         $_SESSION['password'] = $password;
-        header('Location:index_navbar.php', true, 301);
+        header('Location:index_nav.php', true, 301);
         //exit();
     } else {
         // set login fail message
