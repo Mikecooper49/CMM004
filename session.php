@@ -3,13 +3,13 @@ session_start();
 include_once("resources/includes/config_home.php");
 
 // set user_type
-if ($_SESSION['email'] = "test4@test.com")
+if ($_SESSION['email'] == "test4@test.com")
 {
-    $_SESSION['user_type'] = 'ADMIN';
+    $_SESSION['user_type'] = "ADMIN";
+} else {
+
+    $_SESSION['user_type'] = "REG_USER";
 }
-
-    $_SESSION['user_type'] = 'REG_USER';
-
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 

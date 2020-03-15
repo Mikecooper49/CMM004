@@ -45,12 +45,9 @@ include_once("resources/includes/config_home.php");
 
                 <?php
 
-                //testing loop logic
+                include('resources/includes/navbarLogic.php');
 
-          //     $_SESSION['user_type'] = "ADMIN";
-              //  print_r($_SESSION);
-
-if (isset($_SESSION['user_type'])){
+/*if (isset($_SESSION['user_type'])){
                     switch ($_SESSION['user_type']) {
                         case "ADMIN":
                             include('resources/navbars/admin_navbar.html');
@@ -62,7 +59,7 @@ if (isset($_SESSION['user_type'])){
                 }
 if (!isset($_SESSION['user_type'])){
                 include('resources/navbars/user_navbar.html');
-                }
+                } */
                  ?>
 
                 <div class="container-fluid text-center">

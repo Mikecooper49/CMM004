@@ -1,5 +1,13 @@
 <?php
 session_start();
+print_r($_SESSION);
+if ($_SESSION['email'] == "test4@test.com")
+{
+    $_SESSION['user_type'] = "ADMIN";
+} else {
+    $_SESSION['user_type'] = "REG_USER";
+}
+print_r($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="en">
