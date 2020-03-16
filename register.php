@@ -7,17 +7,18 @@ print_r($_SESSION);
 <head>
     <meta charset="UTF-8">
     <title>Register New User</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="resources/styles/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body class ="bg_login">
 
-<nav>
-    <ul>
-        <li><a>Logo</a> </li>
-        <li><a href="index.html">Home</a> </li>
-        <li id = "login"><a href="login.php">Login</a> </li>
-    </ul>
-</nav>
+<!-- set navbar dependent on user_type-->
+
+                <?php
+                include('resources/includes/navbarLogic.php');
+                ?>
 
 <!-- Main Start -->
 <main>
