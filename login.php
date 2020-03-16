@@ -1,16 +1,11 @@
 <?php
-
-// start session
-
 session_start();
-
+print_r($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title> Login front page</title>
-
-   <!-- we need to chose between an off the shelf style set up like bootstrap or write one ourselves -->
 
   <link rel="stylesheet" type="text/css" href="resources/styles/style.css">
 
@@ -23,7 +18,7 @@ session_start();
 
 <div align="center">
     <h1> Welcome to International Students of Aberdeen WebSite (ISa)</h1>
-    <div style="width:500px; border=20px;  align="right">
+    <div style="width:500px; border=20px;  align=" right">
 
 
         <div style="margin:40px 40px">
@@ -31,13 +26,19 @@ session_start();
             <div class="loginbox" align="right">
                 <form action="session.php" method="post">
                     <div class="form-row">
-                        <label> Email : </label><input type="email" name="username">
+                        <label> Email : </label><label>
+                            <input type="email" name="email">
+                        </label>
                     </div>
                     <div class="form-row">
-                        <label> Password :</label><input type="password" name="password" required minlength="5">
+                        <label> Password :</label><label>
+                            <input type="password" name="password" required minlength="5">
+                        </label>
                     </div>
                     <div class="form-row">
-                        Remember Me: <input type="checkbox" name="rememberme" class="box">
+                        Remember Me: <label>
+                            <input type="checkbox" name="rememberme" class="box">
+                        </label>
                     </div>
                     <div class="form-row">
                         <button type="submit">Login</button>
@@ -47,6 +48,7 @@ session_start();
                     </div>
                     <br><br><br>
                     <?php
+                    $_SESSION['user_type'] = "REG_USER";
                     //  login error message if set in session
 
                     if (isset($_SESSION['message']))

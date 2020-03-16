@@ -1,7 +1,6 @@
 <?php
-
-include("resources/includes/config_rgu.php");
-
+session_start();
+include("resources/includes/config_home.php");
 
 // Checking that all fields have been filled
 if(empty($_POST['email']) || $_POST['password'] == "" || $_POST['confirm'] == "" || $_POST['username'] == "")
@@ -17,7 +16,7 @@ if(empty($_POST['email']) || $_POST['password'] == "" || $_POST['confirm'] == ""
     $lastname = $_POST['lastname'];
     $nationality = $_POST['nationality'];
     $username = $_POST['username'];
-    $userType = 'USER';
+    $userType = "REG_USER";
 }
 
 $emailCheck = "SELECT * FROM users WHERE email = '$email'";
@@ -39,9 +38,11 @@ elseif (mysqli_num_rows($userResult) == 1)
 
          //Inserting the new user details into the database
          //$sql_query = "INSERT INTO users(email, password_text, user_type) VALUES ('$email', '$password', '$userType')";
+
          $stmt = $db->prepare("INSERT INTO users(email, password_text, username, firstname, lastname, nationality, user_type) VALUES(?, ?, ?, ?, ?, ?, ?)");
          $stmt->bind_param("sssssss", $email, $password, $username,  $firstname, $lastname, $nationality, $userType);
 
+         $_SESSION['user_type'] = $userType;
 
          if ($stmt->execute()) {
 
@@ -96,4 +97,3 @@ elseif (mysqli_num_rows($userResult) == 1)
      }
 // }
 */
-?>

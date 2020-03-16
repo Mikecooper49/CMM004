@@ -1,38 +1,33 @@
 <?php
-
-// start session
-
 session_start();
+include_once("resources/includes/config_home.php");
 
-// connect to database
-// using home database for initial testing
+// set user_type
 
-include_once("resources/includes/config_rgu.php");
-
+    ($_SESSION['user_type'] = "REG_USER");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     //username, password POSTED from login form on login.php
 
-    $myusername = $_POST['username'];
-    $mypassword = $_POST['password'];
-    $user_type = "";
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
 // check whether cookies are set from login page and set cookie if not
 
     if (!empty($_POST["rememberme"])) {
-        setcookie('username', $_POST['username'], time() + 86400); // set time limit to 1 day (we can change this)
+        setcookie('email', $_POST['email'], time() + 86400); // set time limit to 1 day (we can change this)
         setcookie('password', $_POST['password'], time() + 86400); // set time limit to 1 day (we cna change this)
 
     } else {
-        setcookie('username', "");
+        setcookie('email', "");
         setcookie('password', "");
     }
 
     //  prepared statements to secure db
 
     $stmt = $db->prepare("SELECT * FROM users WHERE email=? AND password_text=?");
-    $stmt->bind_param("ss", $myusername, $mypassword);
+    $stmt->bind_param("ss", $email, $password);
     $stmt->execute();
     $result = $stmt->get_result();
     if ($result->num_rows == 1) {
@@ -40,13 +35,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // set username, password and user_type into session file
 
-        $_SESSION['username'] = $myusername;
-        $_SESSION['user_type'] = $user_type;
-        $_SESSION['password'] = $mypassword;
-        header('Location:index.html', true, 301);
-        exit();
-    }
-    else {
+        $_SESSION['email'] = $email;
+      //  $_SESSION['user_type'] = $userType; // either REG_USER or ADMIN
+        $_SESSION['password'] = $password;
+        header('Location:index_nav.php', true, 301);
+        //exit();
+    } else {
         // set login fail message
 
         $_SESSION['message'] = "Sorry your login has failed please try again";
