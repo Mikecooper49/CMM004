@@ -1,7 +1,8 @@
 <?php
 session_start();
    include("resources/includes/config_lynne.php");
-    $results = mysqli_query($db, 'SELECT * FROM information');
+print_r($_SESSION);
+    $results = mysqli_query($db, 'SELECT title, advice, username FROM onarrival JOIN users ON users.user_ID = onarrival.user_ID ');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -175,7 +176,8 @@ session_start();
                             <td>
                                 <b>
                                     <?php echo $row['title'];?> </b><br>
-                                <?php echo $row['information']; ?>
+                                <i> <?php echo "Submitted by: " . $row['username'];?></i> <br>
+                                <?php echo $row['advice']; ?>
                             </td>
                         </tr>
                     <?php } ?>
@@ -196,7 +198,7 @@ session_start();
         <h4 class="modal-title"> Add Information </h4>
       </div>
       <div class="modal-body">
-      <form action="save_info.php" method="post">
+      <form action="OnArrivalCrowd.php" method="post">
             <div class="form-group">
                 <label for="pwd">Title:</label>
                 <input class="form-control"  name="title" required>

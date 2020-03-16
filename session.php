@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once("resources/includes/config_home.php");
+include_once("resources/includes/config_lynne.php");
 
 // set user_type
 
@@ -33,10 +33,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result->num_rows == 1) {
         $row = $result->fetch_assoc();
 
+        $type_query = "SELECT user_type FROM users WHERE email = '$email'";
+        $type_result = $db->query($type_query);
+        while($row = $type_result->fetch_array())
+        {
+            $usertype = $row['user_type'];
+        }
+
+        $user_query = "SELECT username FROM users WHERE email = '$email'";
+        $user_result = $db->query($user_query);
+        while($row = $user_result->fetch_array())
+        {
+            $username = $row['username'];
+        }
+
         // set username, password and user_type into session file
-        $_SESSION['usertype'] = "REG_USER";
+        $_SESSION['usertype'] = $usertype;
         $_SESSION['email'] = $email;
         $_SESSION['password'] = $password;
+        $_SESSION['username'] = $username;
         header('Location:index_nav.php', true, 301);
         //exit();
     } else {

@@ -1,4 +1,5 @@
 <?php
+    session_start();
    include("resources/includes/config_lynne.php");
     $results = mysqli_query($db, 'SELECT * FROM information');
 ?>
@@ -206,7 +207,7 @@
         <h4 class="modal-title"> Add Information </h4>
       </div>
       <div class="modal-body">
-      <form action="save_info.php" method="post">
+      <form action="OnArrivalCrowd.php" method="post">
             <div class="form-group">
                 <label for="pwd">Title:</label>
                 <input class="form-control"  name="title" required>
