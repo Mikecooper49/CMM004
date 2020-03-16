@@ -4,7 +4,6 @@ include_once("resources/includes/config_home.php");
 
 // set user_type
 
-    ($_SESSION['user_type'] = "REG_USER");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -12,6 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $email = $_POST['email'];
     $password = $_POST['password'];
+  //  $userType = $_POST['usertype'];
 
 // check whether cookies are set from login page and set cookie if not
 
@@ -34,9 +34,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $row = $result->fetch_assoc();
 
         // set username, password and user_type into session file
-
+        $_SESSION['usertype'] = "REG_USER";
         $_SESSION['email'] = $email;
-      //  $_SESSION['user_type'] = $userType; // either REG_USER or ADMIN
         $_SESSION['password'] = $password;
         header('Location:index_nav.php', true, 301);
         //exit();

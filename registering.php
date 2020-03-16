@@ -42,7 +42,7 @@ elseif (mysqli_num_rows($userResult) == 1)
          $stmt = $db->prepare("INSERT INTO users(email, password_text, username, firstname, lastname, nationality, user_type) VALUES(?, ?, ?, ?, ?, ?, ?)");
          $stmt->bind_param("sssssss", $email, $password, $username,  $firstname, $lastname, $nationality, $userType);
 
-         $_SESSION['user_type'] = $userType;
+         $_SESSION['usertype'] = $userType;
 
          if ($stmt->execute()) {
 
