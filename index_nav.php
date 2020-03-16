@@ -30,15 +30,6 @@ include_once("resources/includes/config_home.php");
 
 </head>
 <body>
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-     <!--   <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            </button>
-            <a class="navbar-brand" href="#">Logo</a>
-        </div> -->
-        <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
 
                 <!-- set navbar dependent on user_type-->
 
