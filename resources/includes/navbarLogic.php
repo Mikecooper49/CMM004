@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION['usertype'])){
+if (isset($_SESSION['usertype'])) {
     switch ($_SESSION['usertype']) {
         case 'ADMIN':
             include('resources/navbars/admin_navbar.html');
@@ -8,9 +8,11 @@ if (isset($_SESSION['usertype'])){
         case 'REG_USER':
             include('resources/navbars/reg_user_navbar.html');
             break;
+
     }
 }
-if (!isset($_SESSION['usertype'])){
+if (is_null($_SESSION['usertype'])) {
     include('resources/navbars/user_navbar.html');
 }
+
 

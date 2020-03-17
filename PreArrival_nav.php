@@ -1,5 +1,6 @@
 <?php
-session_start()
+session_start();
+print_r($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,25 +10,53 @@ session_start()
 
     <title>Pre Arrival</title>
     <!--bootstrap -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="resources/styles/stylesheet.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="resources/styles/style.css">
+    <link rel="stylesheet" type="text/css" href="resources/styles/stylesheet_nav.css">
+
 </head>
 <body>
-<!--Navigation Bar -->
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
-    <a class="navbar-brand" href="#"><img src="resources/images/ISAlogoTransparent.png" alt="ISAlogo"></a>
-    <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <?php
-    include('resources/includes/navbarLogic.php');
-    ?>
+
+<!--Navigation Bar-->
+
+<!--<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top"> -->
+<a class="navbar-brand" href="#"><img src="resources/images/ISAlogoTransparent.png" alt="ISAlogo"></a>
+<button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+
+<div class="collapse navbar-collapse" id="main-navigation">
+
+
+    <ul class="navbar-nav">
+        <?php
+        include('resources/includes/navbarLogic.php');
+        ?>
+        <!--     <li class="nav-item">
+                 <a class="nav-link" href="#">Home</a>
+             </li>
+             <li class="nav-item">
+                 <a class="nav-link" href="#">About</a>
+             </li>
+             <li class="nav-item">
+                 <a class="nav-link" href="#">Team</a>
+             </li>
+             <li class="nav-item">
+                 <a class="nav-link" href="#">Login</a>
+             </li> -->
+    </ul>
+</div>
 </nav>
-
 <header class="page-header header container-fluid">
 </header>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -203,5 +232,6 @@ session_start()
             <div class="footer-copyright text-center">© 2020 Copyright: A-Team.com</div>
         </div>
     </footer>
+
 
 
