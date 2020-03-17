@@ -1,7 +1,7 @@
 <?php
     session_start();
-   include("resources/includes/config_lynne.php");
-    $results = mysqli_query($db, 'SELECT * FROM information');
+include("resources/includes/config_home.php");
+$results = mysqli_query($db, 'SELECT * FROM information');
 ?>
 <!DOCTYPE html>
 <html lang="en">

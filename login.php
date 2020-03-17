@@ -1,6 +1,6 @@
 <?php
 session_start();
-print_r($_SESSION);
+//print_r($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,7 +46,6 @@ print_r($_SESSION);
                     <div class="form-row">
                         <a href="register.php">Register as a new user</a>
                     </div>
-                    <br><br><br>
                     <?php
 
                     //  login error message if set in session

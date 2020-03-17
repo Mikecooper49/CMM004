@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("resources/includes/config_lynne.php");
+include("resources/includes/config_home.php");
 
 $title = $_POST['title'];
 $advice = $_POST['information'];
@@ -18,7 +18,7 @@ while($row = $id_result->fetch_array())
 }
 
 
-$user_query = "SELECT user_ID FROM user WHERE username = '$username'";
+$user_query = "SELECT user_ID FROM users WHERE username = '$username'";
 
 
 $stmt = $db->prepare("INSERT INTO onarrival(title, advice, user_ID) VALUES(?, ?, ?)");

@@ -15,7 +15,7 @@ session_start();
 
 if (session_destroy()) {
 
-    header("Location:index.html");
+    header("Location:index_nav.php");
 
     echo 'you have logged out - if in error please log back in';
 }
