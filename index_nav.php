@@ -1,4 +1,8 @@
 <?php
+if (!empty($_GET['status'])) {
+    session_unset();
+    echo '<div>You have logged out</div>';
+}
 session_start();
 //print_r($_SESSION);
 include_once("resources/includes/config_home.php");
@@ -57,7 +61,7 @@ include_once("resources/includes/config_home.php");
                                          style="width:100%">
                                 </figure>
                                 <h1>Welcome</h1>
-                                <p>Welcome to the ‘International Students of Aberdeen (ISa). Our hope is that this site
+                                <p>Welcome to the International Students of Aberdeen (ISa). Our hope is that this site
                                     will
                                     promote links between students from the same home country as well as foster some
                                     international dialogue.

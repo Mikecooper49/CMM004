@@ -93,7 +93,7 @@ session_start();
                 }
                 if (isset($_GET['emptyerr']) && $_GET['emptyerr'] == 1)
                 {
-                    echo "All fields are required";
+                    echo "Please complete all required fields";
                 }
                 if (isset($_GET['usererr']) && $_GET['usererr'] == 1)
                 {
