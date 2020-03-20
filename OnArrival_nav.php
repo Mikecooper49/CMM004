@@ -155,6 +155,8 @@ $results = mysqli_query($db, 'SELECT title, advice, username FROM onarrival JOIN
                 </div>
 
             </div>
+
+
             <div class="col-sm-2 sidenav">
                 <div class="col-md-12" style="text-align: left">
                     <h4> Title </h4>

@@ -15,5 +15,10 @@ session_start();
 
 if (session_destroy()) {
 
-    header('Location:index_nav.php?status=loggedout');
+    echo '<script>
+alert( "You have logged out");
+window.location.href="index_nav.php";
+</script>';
+
+    //  header('Location:index_nav.php?status=logged_out');
 }

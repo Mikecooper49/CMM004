@@ -77,29 +77,6 @@ $results = mysqli_query($db, 'SELECT title, advice, username FROM PreDeparture J
         <?php
         include('resources/includes/navbarLogic.php');
         ?>
-
-        <!--  <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand"><b>ISA</b></a>
-          </div>
-          <div class="collapse navbar-collapse" id="myNavbar">
-              <ul class="nav navbar-nav">
-                  <li><a href="index_nav.php">Home</a></li>
-                  <li><a href="PreArrival_nav.php">PreArrival</a></li>
-                  <li><a href="OnArrival_nav.php">OnArrival</a></li>
-                  <li class="active"><a href="PreDeparture_nav.php">PreDeparture</a></li>
-
-              </ul>
-              <ul class="nav navbar-nav navbar-right">
-                  <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                  <li><a href="signUp.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-              </ul>
-          </div> -->
     </div>
 
 </nav>

@@ -67,7 +67,7 @@ session_start();
         crossorigin="anonymous"></script>
 
 <!--jquery -->
-<script src="main.js"></script>
+<script src="resources/javascript/main.js"></script>
 
 <div class="description">
     <h1 class="display-1">Welcome to Aberdeen</h1>
