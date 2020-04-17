@@ -31,7 +31,7 @@ $email = ($_SESSION['email']);
         <div style="width:500px; border:20px;  align:right">
             <div align="center" class="loginbox" style="margin:40px 40px">
                 <form action="Profile.php" method="post">
-                    <h3> Email: <?php echo $email; ?></h3>
+                    <h3> Profile input for: <?php echo $email; ?></h3>
                     <br>
                     <div class="form-row">
                         <label for="Interests">Interests & Hobbies: </label><br>
