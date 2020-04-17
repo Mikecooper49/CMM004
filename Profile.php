@@ -14,8 +14,8 @@ $email = ($_SESSION['email']);
 
 // select row for username (logged in)
 
-$usernameCheck = "SELECT * FROM users WHERE email = '$email'";
-$userResult = mysqli_query($db, $usernameCheck);
+$emailCheck = "SELECT * FROM users WHERE email = '$email'";
+$userResult = mysqli_query($db, $emailCheck);
 
 if (mysqli_num_rows($userResult) == 1) {
 
@@ -24,9 +24,16 @@ if (mysqli_num_rows($userResult) == 1) {
     //Inserting the user profile details into the database
     $stmt = $db->prepare("INSERT INTO users WHERE email = '$email'(Interests, Gender, Age, Uni, Course) VALUES(?, ?, ?, ?, ?)");
     $stmt->bind_param("ssiss", $Interests, $Gender, $Age, $Uni, $Course);
+    // successful profile message
+    echo '<script>
+alert( "You have successfully added a profile");
+window.location.href="index_nav.php";
+</script>';
 } else {
-    // print so sort of error message and return to profile_form
-    header('location: Profile_form.php?usererr=1');
+    echo '<script>
+alert( "Sorry no profile added, please try again");
+window.location.href="Profile_form.php";
+</script>';
 }
 
 
