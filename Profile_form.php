@@ -55,7 +55,7 @@ $email = ($_SESSION['email']);
                     </div>
                     <div class="form-row">
                         <label for="Age">Age: </label><br>
-                        <input type="number" name="Age" id="Age" placeholder="">
+                        <input type="number" maxlength="2" minlength="1" name="Age" id="Age" placeholder="">
                     </div>
                     <div class="form-row">
                         <label for="Uni">University/College: </label> <br>

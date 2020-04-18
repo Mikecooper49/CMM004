@@ -19,6 +19,4 @@ if (session_destroy()) {
 alert( "You have logged out");
 window.location.href="index_nav.php";
 </script>';
-
-    //  header('Location:index_nav.php?status=logged_out');
 }

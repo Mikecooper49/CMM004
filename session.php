@@ -2,8 +2,6 @@
 session_start();
 include_once("resources/includes/config_home.php");
 
-// set user_type
-
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -11,7 +9,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $email = $_POST['email'];
     $password = $_POST['password'];
-  //  $userType = $_POST['usertype'];
 
 // check whether cookies are set from login page and set cookie if not
 
@@ -35,15 +32,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $type_query = "SELECT user_type FROM users WHERE email = '$email'";
         $type_result = $db->query($type_query);
-        while($row = $type_result->fetch_array())
-        {
+        while ($row = $type_result->fetch_array()) {
             $usertype = $row['user_type'];
         }
 
         $user_query = "SELECT username FROM users WHERE email = '$email'";
         $user_result = $db->query($user_query);
-        while($row = $user_result->fetch_array())
-        {
+        while ($row = $user_result->fetch_array()) {
             $username = $row['username'];
         }
 
