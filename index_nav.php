@@ -5,7 +5,7 @@ if (!empty($_GET['status'])) {
 }
 session_start();
 //print_r($_SESSION);
-include_once("resources/includes/config_home.php");
+include_once("resources/includes/config_lynne.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
