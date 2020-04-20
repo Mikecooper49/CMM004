@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once("resources/includes/config_home.php");
+include_once("resources/includes/config_lynne.php");
 
 // set user_type
 
