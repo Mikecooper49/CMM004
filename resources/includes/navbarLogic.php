@@ -11,7 +11,7 @@ if (isset($_SESSION['usertype'])) {
 
     }
 }
-if (is_null($_SESSION['usertype'])) {
+if (!isset($_SESSION['usertype'])) {
     include('resources/navbars/user_navbar.html');
 }
 
