@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once("resources/includes/config_lynne.php");
+include_once("resources/includes/config_home.php");
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

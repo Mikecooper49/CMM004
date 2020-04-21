@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("resources/includes/config_lynne.php");
+include("resources/includes/config_home.php");
 //print_r($_SESSION);
 //
 //If($_SESSION['usertype'] !== "admin")
