@@ -2,7 +2,6 @@
 session_start();
 include_once("resources/includes/config_home.php");
 
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     //username, password POSTED from login form on login.php

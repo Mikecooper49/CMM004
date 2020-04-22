@@ -12,15 +12,6 @@ $Course = $_POST['Course'];
 // username from session file
 $email = ($_SESSION['email']);
 
-// select row for username (logged in)
-
-//$emailCheck = "SELECT * FROM users WHERE email = '$email'";
-//$userResult = mysqli_query($db, $emailCheck);
-
-//if (mysqli_num_rows($userResult) == 1) {
-
-// strip out escape parameters from Interests & Course (later)
-
 //Update the user profile details into the database
 
 $stmt = $db->prepare("UPDATE users SET Interests=?, Gender=?, Age=?, Uni=?, Course=? WHERE email = ?");

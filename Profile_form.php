@@ -38,7 +38,6 @@ $email = ($_SESSION['email']);
                     </div>
                     <div class="form-row">
                         <label for="Gender">Gender: </label> <br>
-                        <!--   <input type="text" name="Gender" id="Gender" placeholder=""> -->
                         <input type="hidden" name="test" value="Gender">
                         <select name="Gender" id="Gender">
                             <?php

@@ -1,32 +1,28 @@
 <?php
 session_start();
-print_r($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title> Login front page</title>
-
-  <link rel="stylesheet" type="text/css" href="resources/styles/style.css">
-
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="resources/styles/style.css">
 </head>
 
-
-<body class ="bg_login" >
+<body class="bg_login">
 
 <!-- login box and check/set login cookie -->
 
 <div align="center">
     <h1> Welcome to International Students of Aberdeen WebSite (ISa)</h1>
-    <div style="width:500px; border=20px;  align=" right">
-
-
+    <div style="width:500px; border=20px;">
         <div style="margin:40px 40px">
 
             <div class="loginbox" align="right">
                 <form action="session.php" method="post">
                     <div class="form-row">
-                        <label> Email : </label><label>
+                        <label> Email : </label>
+                        <label>
                             <input type="email" name="email">
                         </label>
                     </div>
@@ -50,16 +46,14 @@ print_r($_SESSION);
 
                     //  login error message if set in session
 
-                    if (isset($_SESSION['message']))
-                    { ?>
+                    if (isset($_SESSION['message'])) { ?>
                         <!-- print error message on login page -->
 
-                    <div style="color: #0f22ff"><?php echo $_SESSION['message'];?></div>
-                    <?php unset($_SESSION['message']);
+                        <div style="color: #0f22ff"><?php echo $_SESSION['message']; ?></div>
+                        <?php unset($_SESSION['message']);
                     }
 
-                    if (isset($_GET['usercreated']) && $_GET['usercreated'] == 1)
-                    {
+                    if (isset($_GET['usercreated']) && $_GET['usercreated'] == 1) {
                         echo "User account has been created, please log in";
                     }
                     ?>

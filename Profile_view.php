@@ -1,7 +1,6 @@
 <?php
 session_start();
 include("resources/includes/config_home.php");
-// print_r($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -61,7 +60,6 @@ $email = ($_SESSION['email']);
                         <output name="Uni" id="Uni">
                             <?php echo $row['Uni']; ?>
                         </output>
-
                     </div>
                     <div class="form-row">
                         <label for="Course">Course: </label><br>
@@ -70,7 +68,7 @@ $email = ($_SESSION['email']);
                         </output>
                     </div>
                     <br><br><br><br>
-                    <button onclick="window.location='index_nav.php';return false;">Back to Homepage</button>
+                    <button onclick="window.location='index_nav.php';">Back to Homepage</button>
                     <br>
                 </form>
                 <?php
