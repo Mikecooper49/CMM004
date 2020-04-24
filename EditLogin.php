@@ -48,7 +48,8 @@ include('resources/includes/navbarLogic.php');
 
     <div style="width:500px; border:20px;  align:right">
         <div class= "loginbox" align="right"  style="margin:40px 40px">
-            <form action="registering.php" method="post">
+            <form action="EditLoginPost.php" method="post">
+                <input type="hidden" name="userID" value="<?php echo $userID; ?>">
                 <div class="form-row">
                     <label for="email">Enter New User Email: </label><label id="required">*</label>
                     <input type="text" name="email" id="email" placeholder="New Email">
