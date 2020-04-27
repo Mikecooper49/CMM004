@@ -92,17 +92,25 @@ include('resources/includes/navbarLogic.php');
                 </p>
             </div>
             <div class="col-sm-2 sidenav">
+                <label for="Latest News">Latest News & Events</label>
                 <div class="well">
-                    <p>Latest News</p>
+                    <p align="center"><a
+                                href="https://www.gov.uk/government/topical-events/coronavirus-covid-19-uk-government-response"><b>Coronavirus
+                                (COVID-19): UK Government Response</b></a></p>
                 </div>
                 <div class="well">
-                    <p>Upcoming Events</p>
+                    <p align="center"><a href="https://www.aberdeencity.gov.uk/events"><b>Aberdeen City Council
+                                Events</b></a></p>
+                </div>
+                <div class="well">
+                    <p align="center"><a href="https://www.rgu.ac.uk/events"><b>RGU Events</b></a></p>
                 </div>
             </div>
         </div>
     </div>
-    <footer class="page-footer font-small black">
-        <div class="footer-copyright text-center py-3">© <?php echo date('Y'); ?> Copyright:
+</div>
+<footer class="page-footer font-small black">
+    <div class="footer-copyright text-center py-3">© <?php echo date('Y'); ?> Copyright:
             Aberdeen International Student Directory
         </div>
     </footer>
