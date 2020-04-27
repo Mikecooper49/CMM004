@@ -76,29 +76,18 @@ $email = ($_SESSION['email']);
                     </div>
                     <br><br><br><br>
                     <div class="form-row">
-                        <input type="submit" value="Add Profile Info"><br>
-                    </div>
-                    <br>
-                </form>
-                <?php
-                /*
-                                if (isset($_GET['messerr']) && $_GET['messerr'] == 1) {
-                                    echo "Password and confirm password do not match";
-                                }
-                                if (isset($_GET['emailerr']) && $_GET['emailerr'] == 1) {
-                                    echo "Email address already registered with us<br>";
-                                    echo "<a href='login.php'>Login? </a>";
-                                }
-                                if (isset($_GET['emptyerr']) && $_GET['emptyerr'] == 1) {
-                                    echo "Please complete all required fields";
-                                }
-                                if (isset($_GET['usererr']) && $_GET['usererr'] == 1) {
-                                    echo "Username already in use";
-                                }
-                */
-                ?>
+                        <input type="submit" value="Submit Profile"</
+                    >
+                    <br><br><br>
             </div>
+            </form>
+            <form action="index_nav.php">
+                <input type="submit" value="Cancel (back to homepage)"
+                       name="Submit" id="frm1_submit"/>
+            </form>
+            <br>
         </div>
+    </div>
     </div>
 </main>
 <!-- Main End -->

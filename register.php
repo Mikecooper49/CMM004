@@ -25,7 +25,7 @@ include('resources/includes/navbarLogic.php');
 
         <div style="width:300px; border:20px;  align:right">
             <div class="loginbox" align="right" style="margin:40px 40px">
-                <form action="registering.php" method="post">
+                <form action="Registering_hash.php" method="post">
                     <div class="form-row">
                         <label for="username">Username: </label><label id="required">*</label> <br>
                         <input type="text" name="username" id="username" placeholder="Username">

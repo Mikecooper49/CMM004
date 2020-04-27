@@ -19,7 +19,7 @@ session_start();
         <div style="margin:40px 40px">
 
             <div class="loginbox" align="right">
-                <form action="session.php" method="post">
+                <form action="session_hash.php" method="post">
                     <div class="form-row">
                         <label> Email : </label>
                         <label>

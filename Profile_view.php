@@ -17,15 +17,15 @@ include("resources/includes/config_home.php");
 <!-- set navbar dependent on user_type-->
 <?php
 include('resources/includes/navbarLogic.php');
-// get existing email from $_SESSION
-$email = ($_SESSION['email']);
 ?>
 
 <!-- Main Start -->
 <main>
     <!-- get data from user profile -->
-
     <?php
+    // get existing email from $_SESSION
+    $email = ($_SESSION['email']);
+    // Select row from user table
     $emailQuery = "SELECT * FROM users WHERE email = '$email'";
     $emailResult = mysqli_query($db, $emailQuery);
     $row = mysqli_fetch_array($emailResult);
@@ -36,7 +36,8 @@ $email = ($_SESSION['email']);
 
         <div style="width:500px; border:20px;  align:right">
             <div align="center" class="loginbox" style="margin:40px 40px">
-                <form action="Profile.php" method="post">
+                <form>
+                    <!--  <form action="Profile.php" method="post"> -->
                     <h3> Profile for: <?php echo $email; ?></h3>
                     <br>
                     <div class="form-row">
@@ -68,26 +69,12 @@ $email = ($_SESSION['email']);
                         </output>
                     </div>
                     <br><br><br><br>
-                    <button onclick="window.location='index_nav.php';">Back to Homepage</button>
-                    <br>
+                    <input type="button" value="Back to homepage" onclick="window.location.href='index_nav.php';"/>
+                    <br><br>
+                    <input type="button" value="Edit Profile" onclick="window.location.href='Profile_form.php';"/>
+
                 </form>
-                <?php
-                /*
-                                if (isset($_GET['messerr']) && $_GET['messerr'] == 1) {
-                                    echo "Password and confirm password do not match";
-                                }
-                                if (isset($_GET['emailerr']) && $_GET['emailerr'] == 1) {
-                                    echo "Email address already registered with us<br>";
-                                    echo "<a href='login.php'>Login? </a>";
-                                }
-                                if (isset($_GET['emptyerr']) && $_GET['emptyerr'] == 1) {
-                                    echo "Please complete all required fields";
-                                }
-                                if (isset($_GET['usererr']) && $_GET['usererr'] == 1) {
-                                    echo "Username already in use";
-                                }
-                */
-                ?>
+
             </div>
         </div>
     </div>
