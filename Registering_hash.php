@@ -27,9 +27,9 @@ $usernameCheck = "SELECT * FROM users WHERE username = '$username'";
 $userResult = mysqli_query($db, $usernameCheck);
 
 if (mysqli_num_rows($result) == 1) {
-    header('location: Registering_hash.php?emailerr=1');
+    header('location: register.php?emailerr=1');
 } elseif (mysqli_num_rows($userResult) == 1) {
-    header('location: Registering_hash.php?usererr=1');
+    header('location: register.php?usererr=1');
 } else {
     if ($password == $confirm) {
 
@@ -56,7 +56,7 @@ if (mysqli_num_rows($result) == 1) {
 
     } else {
         //If the passwords do not match, echo out this message
-        header('location: Registering_hash.php?messerr=1');
+        header('location: register.php?messerr=1');
 
     }
 }

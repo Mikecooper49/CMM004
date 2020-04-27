@@ -6,7 +6,7 @@ if (isset($_SESSION['usertype'])) {
             include('resources/navbars/admin_navbar.html');
             break;
         case 'REG_USER':
-            include('resources/navbars/reg_user_navbar.html');
+            include('resources/navbars/reg_user_navbar.php');
             break;
 
     }

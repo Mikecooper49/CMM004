@@ -18,7 +18,6 @@ include("resources/includes/config_home.php");
 <?php
 include('resources/includes/navbarLogic.php');
 ?>
-
 <!-- Main Start -->
 <main>
     <!-- get data from user profile -->
@@ -29,8 +28,14 @@ include('resources/includes/navbarLogic.php');
     $emailQuery = "SELECT * FROM users WHERE email = '$email'";
     $emailResult = mysqli_query($db, $emailQuery);
     $row = mysqli_fetch_array($emailResult);
+    //    check to see if any profile data has been entered
+    if (($row['Interests'] and $row['Gender'] and $row['Age'] and $row['Uni'] and $row['Course']) == NULL) {
+        echo '<script>
+alert( "Sorry no have not entered any profile data, please enter data in Enter Profile");
+window.location.href="Profile_form.php";
+</script>';
+    }
     ?>
-
     <div align="center">
         <h1>Profile View for International Students of Aberdeen </h1>
 
@@ -42,37 +47,28 @@ include('resources/includes/navbarLogic.php');
                     <br>
                     <div class="form-row">
                         <label for="Interests">Interests & Hobbies: </label><br>
-                        <output><?php echo $row['Interests']; ?></output>
+                        <input name="Interests" id="Interests" value="<?php echo $row['Interests']; ?>"/>
                     </div>
                     <div class="form-row">
                         <label for="Gender">Gender: </label> <br>
-                        <output name="Gender" id="Gender">
-                            <?php echo $row['Gender']; ?>
-                        </output>
+                        <input name="Gender" id="Gender" value="<?php echo $row['Gender']; ?>">
                     </div>
                     <div class="form-row">
                         <label for="Age">Age: </label><br>
-                        <output name="Age" id="Age">
-                            <?php echo $row['Age']; ?>
-                        </output>
+                        <input name="Age" id="Age" value="<?php echo $row['Age']; ?>">
                     </div>
                     <div class="form-row">
                         <label for="Uni">University/College: </label><br>
-                        <output name="Uni" id="Uni">
-                            <?php echo $row['Uni']; ?>
-                        </output>
+                        <input name="Uni" id="Uni" value="<?php echo $row['Uni']; ?>">
                     </div>
                     <div class="form-row">
                         <label for="Course">Course: </label><br>
-                        <output name="Course" id="Gender">
-                            <?php echo $row['Course']; ?>
-                        </output>
+                        <input name="Course" id="Gender" value="<?php echo $row['Course']; ?>">
                     </div>
                     <br><br><br><br>
                     <input type="button" value="Back to homepage" onclick="window.location.href='index_nav.php';"/>
                     <br><br>
-                    <input type="button" value="Edit Profile" onclick="window.location.href='Profile_form.php';"/>
-
+                    <!--  waiting for Babs's code <input type="button" value="Edit Profile" onclick="window.location.href='Profile_edit.php';"/> -->
                 </form>
 
             </div>
