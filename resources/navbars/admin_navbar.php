@@ -31,7 +31,8 @@ user_navbar.html - unregistered (visitor)  user navigation bar
                 <li class="active"><a href="PreDeparture_nav.php">PreDeparture</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-               <!-- <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login </a></li> -->
+                <!-- <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login </a></li> -->
+                <li><a><?php echo 'User: ' . ($_SESSION['email']); ?></a></li
                 <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout </a></li>
                 <li><a href="Admin.php"></span> ADMIN </a></li>
 
