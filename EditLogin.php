@@ -1,12 +1,12 @@
 <?php
 session_start();
 include("resources/includes/config_home.php");
-//print_r($_SESSION);
-//
+
 If($_SESSION['usertype'] !== "ADMIN")
 {
    header('location: index_nav.php');
 }
+
 
 ?>
 <!DOCTYPE html>
@@ -19,7 +19,7 @@ If($_SESSION['usertype'] !== "ADMIN")
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-<body class ="bg_login">
+<body class="bg_login">
 
 <!-- set navbar dependent on user_type-->
 
@@ -49,6 +49,7 @@ include('resources/includes/navbarLogic.php');
                     $emailQuery = "SELECT email FROM users WHERE user_ID = '$userID'";
                     $emailResult = mysqli_query($db, $emailQuery);
 
+
                     while($row = mysqli_fetch_array($emailResult))
                     {
                         ?>
@@ -63,6 +64,22 @@ include('resources/includes/navbarLogic.php');
 
                     <label for="email" >Enter New User Email: </label>
                     <input type="text" name="email" id="email" placeholder="New Email"  >
+
+
+    while ($row = mysqli_fetch_array($emailResult)) {
+        ?>
+        <p> <?php echo $row['email']; ?> </p>
+
+        <?php
+    }
+    ?>
+
+    <div style="width:500px; border:20px;  align:right">
+        <div class="loginbox" align="right" style="margin:40px 40px">
+            <form action="registering.php" method="post">
+                <div class="form-row">
+                    <label for="email">Enter New User Email: </label><label id="required">*</label>
+                    <input type="text" name="email" id="email" placeholder="New Email">
 
                 </div>
                 <div id="userEmail" >

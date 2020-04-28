@@ -3,8 +3,7 @@
 
 session_start();
 include("resources/includes/config_home.php");
-//print_r($_SESSION);
-//
+
 If($_SESSION['usertype'] !== "ADMIN")
 {
    header('location: index_nav.php');

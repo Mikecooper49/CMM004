@@ -20,7 +20,8 @@ user_navbar.html - unregistered (visitor)  user navigation bar
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
             </button>
-            <a class="navbar-brand" href="#">Logo</a>
+            <!--   <a class="navbar-brand" href="">Logo</a> -->
+            <img src="resources/images/ISAlogoTransparent_nav.png" alt="ISA Logo">
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
@@ -30,7 +31,10 @@ user_navbar.html - unregistered (visitor)  user navigation bar
                 <li class="active"><a href="PreDeparture_nav.php">PreDeparture</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+                <li><a><?php echo 'User: ' . ($_SESSION['email']); ?></a></li>
                 <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span>Log out</a></li>
+                <li><a href="Profile_form.php">Enter Profile</a></li>
+                <li><a href="Profile_view.php">View Profile</a></li>
             </ul>
         </div>
     </div>

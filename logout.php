@@ -12,13 +12,9 @@ and returns to homepage
 
 */
 session_start();
-
 if (session_destroy()) {
-
     echo '<script>
 alert( "You have logged out");
 window.location.href="index_nav.php";
 </script>';
-
-    //  header('Location:index_nav.php?status=logged_out');
 }

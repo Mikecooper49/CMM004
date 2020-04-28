@@ -96,7 +96,10 @@ nav>ul>li a {
 }
 
 /* Set black background color, white text and some padding */
-footer {
+.page-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     background-color: #555;
     color: white;
     padding: 15px;
@@ -118,6 +121,7 @@ footer {
     margin-bottom: 15px;
 }
 
+
 #editLogin
 {
     display: table;
@@ -134,3 +138,15 @@ footer {
 {
     display: table-cell;
 }
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: #ffffff;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
