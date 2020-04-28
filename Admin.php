@@ -1,4 +1,6 @@
 <?php
+//Admin page updated 28/04/2020
+
 session_start();
 include("resources/includes/config_home.php");
 //print_r($_SESSION);
