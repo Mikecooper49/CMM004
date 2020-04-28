@@ -34,7 +34,7 @@ $email = ($_SESSION['email']);
                     <br>
                     <div class="form-row">
                         <label for="Interests">Interests & Hobbies: </label><br>
-                        <textarea type="text" rows="10" cols="60" name="Interests" id="Interests"></textarea>
+                        <textarea type="text" rows="5" cols="60" name="Interests" id="Interests"></textarea>
                     </div>
                     <div class="form-row">
                         <label for="Gender">Gender: </label> <br>

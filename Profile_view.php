@@ -47,25 +47,25 @@ window.location.href="Profile_form.php";
                     <br>
                     <div class="form-row">
                         <label for="Interests">Interests & Hobbies: </label><br>
-                        <input name="Interests" id="Interests" value="<?php echo $row['Interests']; ?>">
+                        <textarea class="input" rows="5" cols="55"> <?php echo $row['Interests']; ?></textarea>
                     </div>
                     <div class="form-row">
                         <label for="Gender">Gender: </label> <br>
-                        <input name="Gender" id="Gender" value="<?php echo $row['Gender']; ?>">
+                        <input name="Gender" id="Gender" size="10" value="<?php echo $row['Gender']; ?>">
                     </div>
                     <div class="form-row">
                         <label for="Age">Age: </label><br>
-                        <input name="Age" id="Age" value="<?php echo $row['Age']; ?>">
+                        <input name="Age" id="Age" size="4" value="<?php echo $row['Age']; ?>">
                     </div>
                     <div class="form-row">
                         <label for="Uni">University/College: </label><br>
-                        <input name="Uni" id="Uni" value="<?php echo $row['Uni']; ?>">
+                        <input name="Uni" id="Uni" size="30" value="<?php echo $row['Uni']; ?>">
                     </div>
                     <div class="form-row">
                         <label for="Course">Course: </label><br>
-                        <input name="Course" id="Gender" value="<?php echo $row['Course']; ?>">
+                        <input name="Course" id="Gender" size="30" value="<?php echo $row['Course']; ?>">
                     </div>
-                    <br><br><br><br>
+                    <br><br>
                     <input type="button" value="Back to homepage" class="btn btn-primary"
                            onclick="window.location.href='index_nav.php';"/>
                     <br><br>
