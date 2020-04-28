@@ -3,7 +3,7 @@ session_start();
 include("resources/includes/config_lynne.php");
 //print_r($_SESSION);
 //
-//If($_SESSION['usertype'] !== "admin")
+//If($_SESSION['usertype'] !== "ADMIN")
 //{
 //   header('location: index_nav.php');
 //}
@@ -40,6 +40,7 @@ include('resources/includes/navbarLogic.php');
              ?>
         <option value="<?php echo $row['user_ID']; ?>"> <?php echo $row['username']; ?> </option>
         <?php
+
         }
 
         ?>

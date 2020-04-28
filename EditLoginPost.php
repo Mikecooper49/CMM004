@@ -5,8 +5,13 @@ include("resources/includes/config_lynne.php");
 $emailDone = FALSE;
 $passDone = FALSE;
 
+if(empty($_POST['email']) && empty($_POST['emailConfirm']) && empty($_POST['password']) && empty($_POST['passConfirm']))
+{
+    header('location: EditLogin.php?emptyerr=1');
+}
+
 if(empty($_POST['email']) != empty($_POST['emailConfirm']) ){
-    //throw error confirm email
+    header('location: EditLogin.php?emailerr=1');
 }else{
 
     if ($_POST['email'] !== "")
@@ -23,7 +28,7 @@ if(empty($_POST['email']) != empty($_POST['emailConfirm']) ){
 }
 
 if(empty($_POST['password']) != empty($_POST['passConfirm']) ){
-
+    header("location: EditLogin.php?passerr=1");
 }else{
 
     if ($_POST['password'] !== "")
@@ -41,17 +46,20 @@ if(empty($_POST['password']) != empty($_POST['passConfirm']) ){
 
 if($emailDone == TRUE && $passDone == TRUE)
 {
-    $stmt = $db->prepare("UPDATE users SET email = ?, password = ? WHERE userID = ?");
+    $stmt = $db->prepare("UPDATE users SET email = ?, password_text = ? WHERE user_ID = ?");
     $stmt->bind_param("ssi", $email, $password, $userID);
     $stmt->execute();
+    header('location: Admin.php');
 }elseif ($emailDone == TRUE && $passDone == FALSE)
 {
-    $stmt = $db->prepare("UPDATE users SET email = ? WHERE userID = ?");
+    $stmt = $db->prepare("UPDATE users SET email = ? WHERE user_ID = ?");
     $stmt->bind_param("si", $email, $userID);
     $stmt->execute();
+    header('location: Admin.php');
 }elseif ($emailDone == FALSE && $passDone == TRUE)
 {
-    $stmt = $db->prepare("UPDATE users SET password = ? WHERE userID = ?");
+    $stmt = $db->prepare("UPDATE users SET password_text = ? WHERE user_ID = ?");
     $stmt->bind_param("si", $password, $userID);
     $stmt->execute();
+    header('location: Admin.php');
 }

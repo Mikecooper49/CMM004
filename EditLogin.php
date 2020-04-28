@@ -3,7 +3,7 @@ session_start();
 include("resources/includes/config_lynne.php");
 //print_r($_SESSION);
 //
-//If($_SESSION['usertype'] !== "admin")
+//If($_SESSION['usertype'] !== "ADMIN")
 //{
  //   header('location: index_nav.php');
 //}
@@ -32,7 +32,15 @@ include('resources/includes/navbarLogic.php');
 
     <h3> Current user email: </h3>
     <?php
-    $userID = $_POST['userID'];
+    if (empty($_POST['userID']))
+    {
+        $userID = $_SESSION['currentUserID'];
+    }
+    else
+    {
+        $userID = $_POST['userID'];
+        $_SESSION['currentUserID'] = $userID;
+    }
 
     $emailQuery = "SELECT email FROM users WHERE user_ID = '$userID'";
     $emailResult = mysqli_query($db, $emailQuery);
@@ -70,6 +78,19 @@ include('resources/includes/navbarLogic.php');
                 <div class="form-row">
                     <input type="submit" value="Submit"><br>
                 </div>
+                <?php
+                if (isset($_GET['emailerr']) && $_GET['emailerr'] == 1)
+                {
+                    echo "Please input both the new email and the confirm email";
+                }
+                if (isset($_GET['passerr']) && $_GET['passerr'] == 1)
+                {
+                    echo "Please input both the new password and the confirm password";
+                }if (isset($_GET['emptyerr']) && $_GET['emptyerr'] == 1)
+                {
+                    echo "Either the email fields or the password fields must be filled";
+                }
+                ?>
             </form>
         </div>
     </div>
