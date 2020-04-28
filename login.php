@@ -6,8 +6,15 @@ session_start();
 <head>
     <title> Login front page</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- link to team style sheet-->
     <link rel="stylesheet" type="text/css" href="resources/styles/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 </head>
+
 
 <body class="bg_login">
 
@@ -37,7 +44,7 @@ session_start();
                         </label>
                     </div>
                     <div class="form-row">
-                        <button type="submit">Login</button>
+                        <button type="submit" class="btn btn-primary">Login</button>
                     </div>
                     <div class="form-row">
                         <a href="register.php">Register as a new user</a>
@@ -59,10 +66,12 @@ session_start();
                     ?>
                     <br>
                 </form>
-            </div>
 
+
+            </div>
         </div>
     </div>
+
 </body>
 
 <!-- end of body -->

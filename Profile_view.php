@@ -3,7 +3,7 @@ session_start();
 include("resources/includes/config_home.php");
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>User Profile View</title>
@@ -47,7 +47,7 @@ window.location.href="Profile_form.php";
                     <br>
                     <div class="form-row">
                         <label for="Interests">Interests & Hobbies: </label><br>
-                        <input name="Interests" id="Interests" value="<?php echo $row['Interests']; ?>"/>
+                        <input name="Interests" id="Interests" value="<?php echo $row['Interests']; ?>">
                     </div>
                     <div class="form-row">
                         <label for="Gender">Gender: </label> <br>
@@ -66,9 +66,11 @@ window.location.href="Profile_form.php";
                         <input name="Course" id="Gender" value="<?php echo $row['Course']; ?>">
                     </div>
                     <br><br><br><br>
-                    <input type="button" value="Back to homepage" onclick="window.location.href='index_nav.php';"/>
+                    <input type="button" value="Back to homepage" class="btn btn-primary"
+                           onclick="window.location.href='index_nav.php';"/>
                     <br><br>
-                    <!--  waiting for Babs's code <input type="button" value="Edit Profile" onclick="window.location.href='Profile_edit.php';"/> -->
+                    <input type="button" value="Edit Profile" class="btn btn-primary"
+                           onclick="window.location.href='edit-student.php';"/>
                 </form>
 
             </div>

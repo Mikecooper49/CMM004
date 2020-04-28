@@ -82,7 +82,10 @@ nav>ul>li a {
 }
 
 /* Set black background color, white text and some padding */
-footer {
+.page-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     background-color: #555;
     color: white;
     padding: 15px;

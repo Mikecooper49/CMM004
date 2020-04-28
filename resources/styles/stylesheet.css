@@ -82,6 +82,8 @@ body {
 
 .page-footer {
     background-color: gray;
+    position: fixed;
+    bottom: 0;
     color: white;
     padding: 60px 0 30px;
 }

@@ -74,20 +74,20 @@ $email = ($_SESSION['email']);
                         <label for="Course">Course: </label><br>
                         <input type="text" name="Course" id="Course" placeholder="Course/studies">
                     </div>
-                    <br><br><br><br>
+                    <br><br>
                     <div class="form-row">
-                        <input type="submit" value="Submit Profile"</
-                    >
-                    <br><br><br>
+                        <input type="submit" value="Submit Profile" class="btn btn-primary">
+
+                        <br><br>
+                    </div>
+                </form>
+                <form action="index_nav.php">
+                    <input type="submit" value="Cancel (back to homepage)" name="Submit" id="frm1_submit"
+                           class="btn btn-primary"/>
+                </form>
+                <br>
             </div>
-            </form>
-            <form action="index_nav.php">
-                <input type="submit" value="Cancel (back to homepage)"
-                       name="Submit" id="frm1_submit"/>
-            </form>
-            <br>
         </div>
-    </div>
     </div>
 </main>
 <!-- Main End -->
