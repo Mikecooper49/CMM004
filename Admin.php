@@ -1,6 +1,14 @@
 <?php
+//Admin page updated 28/04/2020
+
 session_start();
 include("resources/includes/config_home.php");
+
+If($_SESSION['usertype'] !== "ADMIN")
+{
+   header('location: index_nav.php');
+}
+
 ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -33,6 +41,7 @@ include('resources/includes/navbarLogic.php');
              ?>
         <option value="<?php echo $row['user_ID']; ?>"> <?php echo $row['username']; ?> </option>
         <?php
+
         }
 
         ?>
