@@ -36,8 +36,8 @@ include('resources/includes/navbarLogic.php');
         }
 
         ?>
-            </select> <br>
-            <input type="submit" value="Edit">
+            </select> <br><br>
+            <input type="submit" value="Edit" class="btn btn-primary">
 
         </form>
 

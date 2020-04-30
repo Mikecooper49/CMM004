@@ -52,24 +52,46 @@ include('resources/includes/navbarLogic.php');
                 <?php while ($row = mysqli_fetch_array($results)) { ?>
                 <div class="form-row">
                     <label for="Interests">Interests & Hobbies: </label><br>
-                    <textarea class="input" id="Interests" rows="10"
-                              cols="50"><?php echo $row['Interests']; ?></textarea>
+                    <input name="Interests" id="Interests" value="<?php echo $row['Interests']; ?>">
+
                 </div>
                 <div class="form-row">
                     <label for="Gender">Gender: </label><br>
-                    <input name="Gender" id="Gender" value="<?php echo $row['Gender']; ?>">
+                    <select name="Gender" id="Gender">
+                        <?php
+                        // some options of the 58 in Facebook !
+                        $Gender = array("Rather not say", "Non-Binary", "Male", "Female", "Bigender", "Gender Fluid", "Trans", "Agender");
+                        foreach ($Gender as $item) {
+                            ?>
+                            <option value="<?php echo $item; ?>"><?php echo $item; ?></option>
+                            <?php
+                        }
+                        ?>
+                    </select>
                 </div>
                 <div class="form-row">
                     <label for="Age">Age: </label><br>
-                    <input name="Age" id="Age" value="<?php echo $row['Age']; ?>">
+                    <input type="number" maxlength="2" minlength="1" name="Age" id="Age"
+                           value="<?php echo $row['Age']; ?>">
                 </div>
                 <div class="form-row">
                     <label for="Uni">University/College: </label><br>
-                    <input name="Uni" id="Uni" value="<?php echo $row['Uni']; ?>">
+                    <!--  <input name="Uni" id="Uni" value="<?php echo $row['Uni']; ?>"> -->
+                    <select name="Uni" id="Uni">
+                        <?php
+                        // Higher Education Institutions in the ABZ area
+                        $Uni = array("Robert Gordon University", "Robert Gordon University - Gray's School of Art", "University of Aberdeen", "North East Scotland College", "Robert Gordon College", "Cornhill Community Learning Centre", "Institute of Dentistry", "Scottish Agriculture College");
+                        foreach ($Uni as $item) {
+                            ?>
+                            <option value="<?php echo $item; ?>"><?php echo $item; ?></option>
+                            <?php
+                        }
+                        ?>
+                    </select>
                 </div>
                 <div class="form-row">
                     <label for="Course">Course: </label><br>
-                    <input name="Course" id="Gender" value="<?php echo $row['Course']; ?>">
+                    <input name="Course" id="Course" value="<?php echo $row['Course']; ?>">
                 </div>
                 <br><br>
                 <div class="form-group">

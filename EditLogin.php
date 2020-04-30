@@ -59,7 +59,7 @@ include('resources/includes/navbarLogic.php');
                     <input type="text" name="passConfirm" id="passConfirm" placeholder="Confirm New Password">
                 </div>
                 <div class="form-row">
-                    <input type="submit" value="Submit"><br>
+                    <input type="submit" value="Submit" class="btn btn-primary"><br>
                 </div>
             </form>
         </div>

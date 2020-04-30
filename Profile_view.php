@@ -42,7 +42,6 @@ window.location.href="Profile_form.php";
         <div style="width:500px; border:20px;  align:right">
             <div align="center" class="loginbox" style="margin:40px 40px">
                 <form>
-                    <!--  <form action="Profile.php" method="post"> -->
                     <h3> Profile for: <?php echo $email; ?></h3>
                     <br>
                     <div class="form-row">
