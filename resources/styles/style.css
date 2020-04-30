@@ -26,12 +26,26 @@ p {
     background-color: white;
 }
 
+#userEmail
+{
+    margin-bottom: 15px;
+}
+
+#userEmail p
+{
+    color: revert;
+    background-color: revert;
+    display: inline;
+
+}
+
 .loginbox {
     background-color: darkgray;
     padding: 20px;
     border: 2px black;
 
 }
+
 /*Nav Bar styling for Register.php */
 nav>ul{
     list-style-type: none;
@@ -107,6 +121,24 @@ nav>ul>li a {
     margin-bottom: 15px;
 }
 
+
+#editLogin
+{
+    display: table;
+    border-spacing: 15px;
+}
+
+#editLogin> div
+{
+    display: table-row;
+}
+
+#editLogin> div > label,
+#editLogin > div > input
+{
+    display: table-cell;
+}
+
 .button {
     background-color: #4CAF50; /* Green */
     border: none;
@@ -117,3 +149,4 @@ nav>ul>li a {
     display: inline-block;
     font-size: 16px;
 }
+

@@ -4,6 +4,7 @@ if (!empty($_GET['status'])) {
     echo '<div>You have logged out</div>';
 }
 session_start();
+
 include_once("resources/includes/config_home.php");
 ?>
 <!DOCTYPE html>
