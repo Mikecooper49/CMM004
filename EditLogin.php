@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("resources/includes/config_lynne.php");
+include("resources/includes/config_home.php");
 
 If($_SESSION['usertype'] !== "ADMIN")
 {
@@ -29,11 +29,11 @@ include('resources/includes/navbarLogic.php');
 <!-- Main Start -->
 <main>
 
-    <div  style="width:600px; border:20px;  align:right">
-        <div class= "loginbox" align="left"  style="margin:40px 40px">
-            <form action="EditLoginPost.php" method="post"  id="editLogin" >
+    <div style="width:600px; border:20px;  align:right">
+        <div class="loginbox" align="left" style="margin:40px 40px">
+            <form action="EditLoginPost.php" method="post" id="editLogin">
                 <div id="userEmail">
-                    <label> Current User Email: </label>
+                    <label> Edit User : </label>
                     <?php
                     if (empty($_POST['userID']))
                     {
@@ -73,20 +73,21 @@ include('resources/includes/navbarLogic.php');
                 <br>
                 <div id="userEmail">
 
-                    <label for="password" >Enter New User Password: </label>
-                    <input type="text" name="password" id="password" placeholder="New Password"  >
+                    <label for="password">Enter New User Password: </label>
+                    <input type="text" name="password" id="password" placeholder="New Password">
 
                 </div>
-                <div id="userEmail" >
+                <div id="userEmail">
 
-                    <label for="passConfirm" >Confirm New User Password: </label>
-                    <input type="text" name="passConfirm" id="passConfirm" placeholder="Confirm New Password"  >
+                    <label for="passConfirm">Confirm New User Password: </label>
+                    <input type="text" name="passConfirm" id="passConfirm" placeholder="Confirm New Password">
 
                 </div>
+
+
                 <div class="form-row">
-                    <input type="submit" value="Submit"><br>
+                    <input type="submit" value="Submit" class="btn btn-primary"><br>
                 </div>
-
             </form>
 
             <?php

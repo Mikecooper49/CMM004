@@ -32,7 +32,7 @@ include_once("resources/includes/config_home.php");
             <div class="card-body">
                 <?php
                 echo "<table class='table table-striped table-bordered' class='display nowrap' style='border: solid 1px black;'>";
-                echo "<tr><th>S/No</th><th>Username</th><th>First Name</th><th>Last Name</th><th>Nationality</th><th>University</th><th>Course</th><th>Email</th></tr>";
+                echo "<tr><th>Username</th><th>First Name</th><th>Last Name</th><th>Nationality</th><th>University</th><th>Course</th><th>Interests</th><th>Email</th></tr>";
 
                 class TableRows extends RecursiveIteratorIterator
                 {
@@ -65,7 +65,7 @@ include_once("resources/includes/config_home.php");
                 try {
                     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
                     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                    $stmt = $conn->prepare("SELECT user_ID, username, firstname, lastname, nationality, Uni, course, email FROM users");
+                    $stmt = $conn->prepare("SELECT username, firstname, lastname, nationality, Uni, course, Interests,email FROM users");
                     $stmt->execute();
 
                     // set the resulting array to associative
@@ -79,6 +79,10 @@ include_once("resources/includes/config_home.php");
                 $conn = null;
                 echo "</table>";
                 ?>
+                <br><br>
+                <input type="button" value="Back to homepage" class="btn btn-primary"
+                       onclick="window.location.href='index_nav.php';"/>
+                <br><br>
             </div>
         </div>
     </div>
