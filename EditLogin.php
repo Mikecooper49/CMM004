@@ -69,8 +69,6 @@ include('resources/includes/navbarLogic.php');
     while ($row = mysqli_fetch_array($emailResult)) {
         ?>
         <p> <?php echo $row['email']; ?> </p>
-
-        <?php
     }
     ?>
 

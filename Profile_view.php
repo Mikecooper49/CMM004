@@ -70,6 +70,9 @@ window.location.href="Profile_form.php";
                     <br><br>
                     <input type="button" value="Edit Profile" class="btn btn-primary"
                            onclick="window.location.href='edit-student.php';"/>
+                    <br><br>
+                    <input type="button" value="Connect with others" class="btn btn-primary"
+                           onclick="window.location.href='connecttwo.php';"/>
                 </form>
 
             </div>
