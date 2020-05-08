@@ -2,7 +2,7 @@
 session_start();
 include("resources/includes/config_home.php");
 
-$email = ($_SESSION['email']);
+$email = ($_POST['email']);
 $Interests = $_POST['Interests'];
 $Gender = $_POST['Gender'];
 $Age = $_POST['Age'];

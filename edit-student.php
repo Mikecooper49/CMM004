@@ -1,7 +1,11 @@
 <?php
 session_start();
 include("resources/includes/config_home.php");
-$email = $_SESSION['email'];
+if ($_SESSION['usertype'] == "ADMIN") {
+    $email = $_POST['email'];
+} else {
+    $email = $_SESSION['email'];
+}
 $results = mysqli_query($db, "SELECT * FROM users WHERE email = '$email'");
 ?>
 <!DOCTYPE html>
@@ -76,6 +80,7 @@ include('resources/includes/navbarLogic.php');
                 </div>
                 <div class="form-row">
                     <label for="Uni">University/College: </label><br>
+                    <input type="hidden" name="email" value="<?php echo $email; ?>">
                     <!--  <input name="Uni" id="Uni" value="<?php echo $row['Uni']; ?>"> -->
                     <select name="Uni" id="Uni">
                         <?php

@@ -468,7 +468,7 @@ $results = mysqli_query($db, 'SELECT title, advice, username FROM PreDeparture J
     </div>
 
     <footer class="container-fluid text-center">
-        <p>Copyright @ ISA 2020</p>
+        <!-- <p>Copyright @ ISA 2020</p> -->
     </footer>
 </body>
 </html>

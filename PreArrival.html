@@ -223,6 +223,27 @@
 
     </div>
 </div>
+
+<div style="max-width: 900px; margin: auto">
+    <div class="col-md-12" style="text-align: left">
+        <hr>
+        <p> Crowd Source Information - <a data-toggle="modal" data-target="#myModal" href="javascript:;"> Add new </a>
+        </p>
+        <table class="table table-bordered">
+            <?php while($row = mysqli_fetch_array($results)){ ?>
+            <tr>
+                <td>
+                    <b>
+                        <?php echo $row['title'];?> </b><br>
+                    <i> <?php echo "Submitted by: " . $row['username'];?></i> <br>
+                    <?php echo $row['advice']; ?>
+                </td>
+            </tr>
+            <?php } ?>
+        </table>
+    </div>
+</div>
+
 </body>
 <!-- <footer class="page-footer">
      <div class="container">

@@ -5,7 +5,7 @@ include("resources/includes/config_home.php");
 $results = mysqli_query($db, 'SELECT title, advice, username FROM onarrival JOIN users ON users.user_ID = onarrival.user_ID ');
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>On Arrival - Aberdeen International Student Guide</title>
@@ -153,34 +153,34 @@ $results = mysqli_query($db, 'SELECT title, advice, username FROM onarrival JOIN
                         </a>
                     </div>
                 </div>
-
             </div>
-
 
             <div class="col-sm-2 sidenav">
-                <div class="col-md-12" style="text-align: left">
-                    <h4> Title </h4>
-                    <ul class="list-group">
-                        <li class="list-group-item"><a href="#"> Link 1</a></li>
-                        <li class="list-group-item"><a href="#"> Link 1</a></li>
-                        <li class="list-group-item"><a href="#"> Link 1</a></li>
-                    </ul>
+                <div class="Latest News">Latest News & Events</label>
+                    <div class="well">
+                        <p align="center"><a
+                                    href="https://www.gov.uk/government/topical-events/coronavirus-covid-19-uk-government-response"><b>Coronavirus
+                                    (COVID-19): UK Government Response</b></a></p>
+                    </div>
+                    <div class="well">
+                        <p align="center"><a href="https://www.aberdeencity.gov.uk/events"><b>Aberdeen City Council
+                                    Events</b></a></p>
+                    </div>
+                    <div class="well">
+                        <p align="center"><a href="https://www.rgu.ac.uk/events"><b>RGU Events</b></a></p>
+                    </div>
 
-                    <h4> Title </h4>
-                    <ul class="list-group">
-                        <li class="list-group-item"><a href="#"> Link 1</a></li>
-                        <li class="list-group-item"><a href="#"> Link 1</a></li>
-                        <li class="list-group-item"><a href="#"> Link 1</a></li>
-                    </ul>
                 </div>
             </div>
-
-            <div style="max-width: 900px; margin: auto">
-                <div class="col-md-12" style="text-align: left">
-                    <hr>
-                    <p> Crowd Source Information - <a data-toggle="modal" data-target="#myModal" href="javascript:;"> Add new </a></p>
-                    <table class="table table-bordered">
-                        <?php while($row = mysqli_fetch_array($results)){ ?>
+        </div>
+    </div>
+    <div style="max-width: 900px; margin: auto">
+        <div class="col-md-12" style="text-align: left">
+            <hr>
+            <p> Crowd Source Information - <a data-toggle="modal" data-target="#myModal" href="javascript:;"> Add
+                    new </a></p>
+            <table class="table table-bordered">
+                <?php while($row = mysqli_fetch_array($results)){ ?>
                             <tr>
                                 <td>
                                     <b>
@@ -193,9 +193,6 @@ $results = mysqli_query($db, 'SELECT title, advice, username FROM onarrival JOIN
                     </table>
                 </div>
             </div>
-        </div>
-</div>
-
     <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
@@ -228,10 +225,10 @@ $results = mysqli_query($db, 'SELECT title, advice, username FROM onarrival JOIN
 </div>
 
     <!-- Footer -->
-<footer class="page-footer font-small black">
+    <!--<footer class="page-footer font-small black">
     <div class="footer-copyright text-center py-3">© <?php echo date('Y'); ?> Copyright:
         Aberdeen International Student Directory
     </div>
-</footer>
+</footer> -->
 </body>
 </html>
