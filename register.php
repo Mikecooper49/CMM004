@@ -51,7 +51,6 @@ include('resources/includes/navbarLogic.php');
                         <input type="text" name="lastname" id="lastname" placeholder="Last Name">
                     </div>
                     <div class="form-row">
-                        <label for="usertype">Last Name: </label><br>
                         <input type="text" name="usertype" id="usertype" value="REG_USER" hidden>
                     </div>
                     <div class="form-row">
