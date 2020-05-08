@@ -49,17 +49,17 @@ if($emailDone == TRUE && $passDone == TRUE)
     $stmt = $db->prepare("UPDATE users SET email = ?, password_text = ? WHERE user_ID = ?");
     $stmt->bind_param("ssi", $email, $password, $userID);
     $stmt->execute();
-    header('location: Admin.php');
+    header('location: Admin.php?emailPass=1');
 }elseif ($emailDone == TRUE && $passDone == FALSE)
 {
     $stmt = $db->prepare("UPDATE users SET email = ? WHERE user_ID = ?");
     $stmt->bind_param("si", $email, $userID);
     $stmt->execute();
-    header('location: Admin.php');
+    header('location: Admin.php?email=1');
 }elseif ($emailDone == FALSE && $passDone == TRUE)
 {
     $stmt = $db->prepare("UPDATE users SET password_text = ? WHERE user_ID = ?");
     $stmt->bind_param("si", $password, $userID);
     $stmt->execute();
-    header('location: Admin.php');
+    header('location: Admin.php?pass=1');
 }

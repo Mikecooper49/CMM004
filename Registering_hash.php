@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("resources/includes/config_home.php");
+include("resources/includes/config_lynne.php");
 
 // Checking that all fields have been filled
 if (empty($_POST['email']) || $_POST['password'] == "" || $_POST['confirm'] == "" || $_POST['username'] == "") {
