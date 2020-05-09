@@ -26,7 +26,7 @@ user_navbar.html - unregistered (visitor)  user navigation bar
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="index_nav.php">Home</a></li>
-                <li class="active"><a href="PreArrival.html">PreArrival</a></li>
+                <li class="active"><a href="PreArrival.php">PreArrival</a></li>
                 <li class="active"><a href="OnArrival_nav.php">OnArrival</a></li>
                 <li class="active"><a href="PreDeparture_nav.php">PreDeparture</a></li>
             </ul>

@@ -25,7 +25,7 @@ $email = ($_SESSION['email']);
 <!-- Main Start -->
 <main>
     <div align="center">
-        <h1>Profile form for International Students of Aberdeen </h1>
+        <h1>Profile form for International Students of Aberdeen</h1>
 
         <div style="width:500px; border:20px;  align:right">
             <div align="center" class="loginbox" style="margin:40px 40px">

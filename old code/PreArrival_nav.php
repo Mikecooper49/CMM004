@@ -19,8 +19,8 @@ session_start();
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="resources/styles/style.css">
-    <link rel="stylesheet" type="text/css" href="resources/styles/stylesheet_nav.css">
+    <link rel="stylesheet" type="text/css" href="../resources/styles/style.css">
+    <link rel="stylesheet" type="text/css" href="../resources/styles/stylesheet_nav.css">
 
 </head>
 <body>
@@ -67,7 +67,7 @@ session_start();
         crossorigin="anonymous"></script>
 
 <!--jquery -->
-<script src="resources/javascript/main.js"></script>
+<script src="../resources/javascript/main.js"></script>
 
 <div class="description">
     <h1 class="display-1">Welcome to Aberdeen</h1>
@@ -83,16 +83,18 @@ session_start();
         <!--Immigration -->
         <div class="col-lg-3 col-md-3 col-sm-12">
             <h3 class="feature-title">Visa/Immigration</h3>
-            <img src="resources/images/CARD Images/visa2.jpg" class="img-fluid">
-            <p>The Link below will take you to the UK Council for International Offers website. Where you can find all relevant information. </p>
+            <img src="../resources/images/CARD%20Images/visa2.jpg" class="img-fluid">
+            <p>The Link below will take you to the UK Council for International Offers website. Where you can find all
+                relevant information. </p>
             <a class="btn btn-primary" href="https://www.ukcisa.org.uk/" role="button">Link</a>
         </div>
         <!--Banking -->
         <div class="col-lg-3 col-md-3 col-sm-12">
             <h3 class="feature-title">Banking</h3>
-            <img src="resources/images/CARD Images/Bank.jpg" class="img-fluid">
-            <p>The UK banking sector is dominated by a few very large banks, including the Lloyds Group, Barclays, Bank of Scotland, the Royal Bank of Scotland (RBS), and HSBC. </p>
-            <a class="btn btn-primary"href="https://www.lloydsbank.com/" role="button">Lloyds Bank</a>
+            <img src="../resources/images/CARD%20Images/Bank.jpg" class="img-fluid">
+            <p>The UK banking sector is dominated by a few very large banks, including the Lloyds Group, Barclays, Bank
+                of Scotland, the Royal Bank of Scotland (RBS), and HSBC. </p>
+            <a class="btn btn-primary" href="https://www.lloydsbank.com/" role="button">Lloyds Bank</a>
 
             <a class="btn btn-primary" href="https://www.barclays.co.uk/" role="button">Barclays Bank</a>
 
@@ -105,8 +107,10 @@ session_start();
         <!--Accommodation -->
         <div class="col-lg-3 col-md-3 col-sm-12">
             <h3 class=feature-title">Accommodation</h3>
-            <img src="resources/images/CARD Images/Accommodation02.jpg" class="img-fluid">
-            <p>There are several ways to find your perfect accomodation. You can googlesearch the letting agents, contact your university accomodation team or find a temporary accommodation via booking.com or AirBnB. You can find the links below.</p>
+            <img src="../resources/images/CARD%20Images/Accommodation02.jpg" class="img-fluid">
+            <p>There are several ways to find your perfect accomodation. You can googlesearch the letting agents,
+                contact your university accomodation team or find a temporary accommodation via booking.com or AirBnB.
+                You can find the links below.</p>
             <a class="btn-primary btn-sm" href="https://www.airbnb.co.uk/" role="button">Link to AirBnB</a>
             <a class="btn-secondary btn-sm" href="https://www.booking.com/">Link to Booking.com</a>
         </div>
@@ -114,8 +118,10 @@ session_start();
         <!-- Visit Scotland -->
         <div class="col-lg-3 col-md-3 col-sm-12">
             <h3 class="feature-title">Visit Scotland</h3>
-            <img src="resources/images/CARD Images/VisitScotland.png" class="img-fluid">
-            <p>VisitScotland, formerly the Scottish Tourist Board, is a national tourism organisation for Scotland. It is an executive non-departmental public body of the Scottish Government, with offices in Edinburgh, Glasgow, Inverness, and other parts of Scotland.</p>
+            <img src="../resources/images/CARD%20Images/VisitScotland.png" class="img-fluid">
+            <p>VisitScotland, formerly the Scottish Tourist Board, is a national tourism organisation for Scotland. It
+                is an executive non-departmental public body of the Scottish Government, with offices in Edinburgh,
+                Glasgow, Inverness, and other parts of Scotland.</p>
             <a class="btn btn-primary" href="https://www.visitscotland.com/">Link</a>
 
         </div>
@@ -132,33 +138,41 @@ session_start();
         <div class="col-lg-3 col-md-3 col-sm-12">
             <!--Bus -->
             <h3 class="feature-title">Bus</h3>
-            <img src="resources/images/CARD Images/Buses.png" class="img-fluid">
-            <p>First Aberdeen and Stagecoach operate a network of high frequency services across Aberdeen city. Follow the links and you will find maps, fares and journey planners.
+            <img src="../resources/images/CARD%20Images/Buses.png" class="img-fluid">
+            <p>First Aberdeen and Stagecoach operate a network of high frequency services across Aberdeen city. Follow
+                the links and you will find maps, fares and journey planners.
             </p>
             <a class="btn btn-seondary" href="https://www.firstgroup.com/aberdeen">FirstAberdeen</a>
-            <a class="btn btn-secondary" href="https://www.stagecoachbus.com/promos-and-offers/north-scotland/aberdeen-bus-travel">Stagecoach</a>
+            <a class="btn btn-secondary"
+               href="https://www.stagecoachbus.com/promos-and-offers/north-scotland/aberdeen-bus-travel">Stagecoach</a>
         </div>
         <!--Train -->
         <div class="col-lg-3 col-md-3 col-sm-12">
             <h3 class="feature-title">Train</h3>
-            <img src="resources/images/CARD Images/Train.jpg" class="img-fluid">
-            <p>UK wide train services connect Aberdeen with direct trains to London, Edinburgh, Glasgow and Inverness.</p>
-            <a class="btn btn-secondary" href="https://www.scotrail.co.uk/plan-your-journey/stations-and-facilities/abd">ScotRail</a>
+            <img src="../resources/images/CARD%20Images/Train.jpg" class="img-fluid">
+            <p>UK wide train services connect Aberdeen with direct trains to London, Edinburgh, Glasgow and
+                Inverness.</p>
+            <a class="btn btn-secondary"
+               href="https://www.scotrail.co.uk/plan-your-journey/stations-and-facilities/abd">ScotRail</a>
             <a class="btn btn-secondary" href="https://www.lner.co.uk/">LNER</a>
         </div>
         <!--Airport -->
         <div class="col-lg-3 col-md-3 col-sm-12">
             <h3 class=feature-title">Airport</h3>
-            <img src="resources/images/CARD Images/Airport.jpg" class="img-fluid">
-            <p>Aberdeen boasts excellent direct air links to major UK and European cities. Local bus and taxi services offer fast, convenient connections from the airport to the University.</p>
+            <img src="../resources/images/CARD%20Images/Airport.jpg" class="img-fluid">
+            <p>Aberdeen boasts excellent direct air links to major UK and European cities. Local bus and taxi services
+                offer fast, convenient connections from the airport to the University.</p>
             <a class="btn btn-secondary" href="https://www.aberdeenairport.com/">Airport</a>
         </div>
 
         <div class="col-lg-3 col-md-3 col-sm-12">
             <h3 class="feature-title">Taxi</h3>
-            <img src="resources/images/CARD Images/Taxi.jpg" class="img-fluid">
-            <p>You can catch a taxi from the airport, the centre of town and by telephoning individual taxi companies.</p>
-            <a class="btn btn-secondary" href="https://www.taxisaberdeenairport.co.uk/?_kk=taxis%20aberdeen%20airport&_kt=b3faffe4-9451-48d5-98a6-5d186aa42fb3&gclid=EAIaIQobChMI7YP8gvaa6AIViK3tCh3aDgX-EAAYASAAEgKioPD_BwE">Taxi fare calculator</a>
+            <img src="../resources/images/CARD%20Images/Taxi.jpg" class="img-fluid">
+            <p>You can catch a taxi from the airport, the centre of town and by telephoning individual taxi
+                companies.</p>
+            <a class="btn btn-secondary"
+               href="https://www.taxisaberdeenairport.co.uk/?_kk=taxis%20aberdeen%20airport&_kt=b3faffe4-9451-48d5-98a6-5d186aa42fb3&gclid=EAIaIQobChMI7YP8gvaa6AIViK3tCh3aDgX-EAAYASAAEgKioPD_BwE">Taxi
+                fare calculator</a>
         </div>
 
     </div>
@@ -170,30 +184,46 @@ session_start();
     <div class="row">
         <div class="col-lg-3 col-md-3 col-sm-12">
             <h3 class="feature-title">Robert Gordon University</h3>
-            <img src="resources/images/CARD Images/RGU.jpg" class="img-fluid">
-            <p>Robert Gordon University provides industry led undergraduate and postgraduate courses leading to highly relevant awards and degrees. Situated on one of the most beautiful campuses in the UK, the university provides facilities that will have a real influence on your capacity to learn.</p>
+            <img src="../resources/images/CARD%20Images/RGU.jpg" class="img-fluid">
+            <p>Robert Gordon University provides industry led undergraduate and postgraduate courses leading to highly
+                relevant awards and degrees. Situated on one of the most beautiful campuses in the UK, the university
+                provides facilities that will have a real influence on your capacity to learn.</p>
             <a class="btn btn-secondary" href="https://www.rgu.ac.uk/about">Robert Gordon University</a>
         </div>
 
         <div class="col-lg-3 col-md-3 col-sm-12">
             <h3 class="feature-title">University of Aberdeen</h3>
-            <img src="resources/images/CARD Images/University-of-Aberdeen1.jpg" class="img-fluid">
-            <p>Teaching at the University of Aberdeen is organised across 12 schools which encompass a broad range of disciplines. Multidisciplinary research centres and institutes bring together experts at the cutting-edge of their fields to work with colleagues across the UK and beyond.</p>
+            <img src="../resources/images/CARD%20Images/University-of-Aberdeen1.jpg" class="img-fluid">
+            <p>Teaching at the University of Aberdeen is organised across 12 schools which encompass a broad range of
+                disciplines. Multidisciplinary research centres and institutes bring together experts at the
+                cutting-edge of their fields to work with colleagues across the UK and beyond.</p>
             <a class="btn btn-secondary" href="https://www.abdn.ac.uk/">University of Aberdeen</a>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-12">
             <h3 class=feature-title">NHS</h3>
-            <img src="resources/images/CARD Images/NHS.png" class="img-fluid">
-            <p>NHS Scotland, sometimes styled NHSScotland, is the publicly funded healthcare system in Scotland, and one of the four systems which make up the National Health Service in the United Kingdom. It operates fourteen territorial NHS boards across Scotland, seven special non-geographic health boards and NHS Health Scotland.</p>
+            <img src="../resources/images/CARD%20Images/NHS.png" class="img-fluid">
+            <p>NHS Scotland, sometimes styled NHSScotland, is the publicly funded healthcare system in Scotland, and one
+                of the four systems which make up the National Health Service in the United Kingdom. It operates
+                fourteen territorial NHS boards across Scotland, seven special non-geographic health boards and NHS
+                Health Scotland.</p>
             <a class="btn btn-secondary" href="https://www.scot.nhs.uk/">NHS</a>
         </div>
 
         <!--WEATHER WIDGET -->
         <div class="col-lg-3 col-md-3 col-sm-12">
             <h3 class=feature-title">Weather</h3>
-            <p><a class="weatherwidget-io" href="https://forecast7.com/en/57d15n2d09/aberdeen/" data-label_1="ABERDEEN" data-label_2="WEATHER" data-days="5" data-theme="desert" >ABERDEEN WEATHER</a>
+            <p><a class="weatherwidget-io" href="https://forecast7.com/en/57d15n2d09/aberdeen/" data-label_1="ABERDEEN"
+                  data-label_2="WEATHER" data-days="5" data-theme="desert">ABERDEEN WEATHER</a>
                 <script>
-                    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+                    !function (d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (!d.getElementById(id)) {
+                            js = d.createElement(s);
+                            js.id = id;
+                            js.src = 'https://weatherwidget.io/js/widget.min.js';
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }
+                    }(document, 'script', 'weatherwidget-io-js');
                 </script></p>
         </div>
 
