@@ -29,13 +29,14 @@ include('resources/includes/navbarLogic.php');
     $emailResult = mysqli_query($db, $emailQuery);
     $row = mysqli_fetch_array($emailResult);
     //    check to see if any profile data has been entered
-    if (($row['Interests'] and $row['Gender'] and $row['Age'] and $row['Uni'] and $row['Course']) == NULL) {
-        echo '<script>
-alert( "Sorry no have not entered any profile data, please enter data in Enter Profile");
-window.location.href="Profile_form.php";
-</script>';
-    }
+    //  if (($row['Interests'] and $row['Gender'] and $row['Age'] and $row['Uni'] and $row['Course']) == NULL) {
+    //    echo '<script>
+    //alert( "Sorry no have not entered any profile data, please enter data in Enter Profile");
+    //window.location.href="Profile_form.php";
+    //</script>';
+    //   }
     ?>
+
     <div align="center">
         <h1>Profile View for International Students of Aberdeen </h1>
 
@@ -65,14 +66,25 @@ window.location.href="Profile_form.php";
                         <input name="Course" id="Gender" size="30" value="<?php echo $row['Course']; ?>">
                     </div>
                     <br><br>
-                    <input type="button" value="Back to homepage" class="btn btn-primary"
-                           onclick="window.location.href='index_nav.php';"/>
-                    <br><br>
-                    <input type="button" value="Edit Profile" class="btn btn-primary"
-                           onclick="window.location.href='edit-student.php';"/>
-                    <br><br>
-                    <input type="button" value="Connect with others" class="btn btn-primary"
-                           onclick="window.location.href='connecttwo.php';"/>
+                    <?php
+                    if ($_SESSION['usertype'] == "ADMIN") { ?>
+                        <div class="form-row">
+                            <input type="button" value="Back to Admin" class="btn btn-primary"
+                                   onclick="window.location='Admin.php'">
+                        </div>
+                        <?php
+                    } else { ?>
+                        <input type="button" value="Back to homepage" class="btn btn-primary"
+                               onclick="window.location.href='index.php';"/>
+                        <br><br>
+                        <input type="button" value="Edit Profile" class="btn btn-primary"
+                               onclick="window.location.href='edit-student.php';"/>
+                        <br><br>
+                        <input type="button" value="Connect with others" class="btn btn-primary"
+                               onclick="window.location.href='connecttwo.php';"/>
+                        <?php
+                    }
+                    ?>
                 </form>
 
             </div>

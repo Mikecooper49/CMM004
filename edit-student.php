@@ -3,7 +3,8 @@ session_start();
 include("resources/includes/config_home.php");
 if ($_SESSION['usertype'] == "ADMIN") {
     $email = $_POST['email'];
-} else {
+}
+else {
     $email = $_SESSION['email'];
 }
 $results = mysqli_query($db, "SELECT * FROM users WHERE email = '$email'");
@@ -34,12 +35,6 @@ $results = mysqli_query($db, "SELECT * FROM users WHERE email = '$email'");
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-    <!--  <style>
-          label {
-              display: block;
-          }
-      </style> -->
-
 </head>
 <body class="bg_login">
 
@@ -48,12 +43,16 @@ include('resources/includes/navbarLogic.php');
 ?>
 
 <div align="center">
-    <h1>Edit Student details </h1>
+    <h1>Edit Student Profile </h1>
 
     <div style="width:500px; border:20px;  align:right">
         <div align="center" class="loginbox" style="margin:40px 40px">
-            <form action="update-student.php" method="post">
+
+            <form action="Profile.php" method="post">
                 <?php while ($row = mysqli_fetch_array($results)) { ?>
+                <?php echo "Edit User: " . $row['email']; ?>
+                <br>
+                <hr>
                 <div class="form-row">
                     <label for="Interests">Interests & Hobbies: </label><br>
                     <input name="Interests" id="Interests" value="<?php echo $row['Interests']; ?>">
@@ -61,7 +60,7 @@ include('resources/includes/navbarLogic.php');
                 </div>
                 <div class="form-row">
                     <label for="Gender">Gender: </label><br>
-                    <select name="Gender" id="Gender">
+                    <select name="Gender" id="Gender">">
                         <?php
                         // some options of the 58 in Facebook !
                         $Gender = array("Rather not say", "Non-Binary", "Male", "Female", "Bigender", "Gender Fluid", "Trans", "Agender");
@@ -75,12 +74,12 @@ include('resources/includes/navbarLogic.php');
                 </div>
                 <div class="form-row">
                     <label for="Age">Age: </label><br>
-                    <input type="number" maxlength="2" minlength="1" name="Age" id="Age"
+                    <input type="number" maxlength="2" name="Age" id="Age"
                            value="<?php echo $row['Age']; ?>">
                 </div>
                 <div class="form-row">
                     <label for="Uni">University/College: </label><br>
-                    <input type="hidden" name="email" value="<?php echo $email; ?>">
+                    <input type="hidden" name="email">
                     <!--  <input name="Uni" id="Uni" value="<?php echo $row['Uni']; ?>"> -->
                     <select name="Uni" id="Uni">
                         <?php
@@ -103,10 +102,21 @@ include('resources/includes/navbarLogic.php');
                     <input type="submit" value="Update" class="btn btn-primary">
                 </div>
             </form>
-            <form action="index_nav.php">
-                <input type="submit" value="Cancel (back to homepage)" id="frm1_submit"
-                       class="btn btn-primary"/>
-            </form>
+            <?php
+            if ($_SESSION['usertype'] == "ADMIN") { ?>
+                <div class="form-row">
+                    <input type="button" value="Cancel (back to Admin)" class="btn btn-primary"
+                           onclick="window.location='Admin.php'">
+                </div>
+                <?php
+            } else { ?>
+                <form action="index.php">
+                    <input type="submit" value="Cancel (back to homepage)" id="frm1_submit"
+                           class="btn btn-primary"/>
+                </form>
+                <?php
+            }
+            ?>
             <?php } ?>
         </div>
     </div>

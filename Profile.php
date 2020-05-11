@@ -12,6 +12,8 @@ $Course = $_POST['Course'];
 // username from session file
 $email = ($_SESSION['email']);
 
+// check if any profile fields were filled out
+
 //Update the user profile details into the database
 
 $stmt = $db->prepare("UPDATE users SET Interests=?, Gender=?, Age=?, Uni=?, Course=? WHERE email = ?");

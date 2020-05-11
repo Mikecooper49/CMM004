@@ -81,7 +81,7 @@ include_once("resources/includes/config_home.php");
                 ?>
                 <br><br>
                 <input type="button" value="Back to homepage" class="btn btn-primary"
-                       onclick="window.location.href='index_nav.php';"/>
+                       onclick="window.location.href='index.php';"/>
                 <br><br>
             </div>
         </div>

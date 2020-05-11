@@ -5,61 +5,58 @@ include("resources/includes/config_home.php");
 $emailDone = FALSE;
 $passDone = FALSE;
 
-if(empty($_POST['email']) && empty($_POST['emailConfirm']) && empty($_POST['password']) && empty($_POST['passConfirm']))
-{
+
+if (empty($_POST['email']) && empty($_POST['emailConfirm']) && empty($_POST['password']) && empty($_POST['passConfirm'])) {
     header('location: EditLogin.php?emptyerr=1');
 }
 
-if(empty($_POST['email']) != empty($_POST['emailConfirm']) ){
+if (empty($_POST['email']) != empty($_POST['emailConfirm'])) {
     header('location: EditLogin.php?emailerr=1');
-}else{
+} else {
 
-    if ($_POST['email'] !== "")
-    {
+    if ($_POST['email'] !== "") {
         //Taking the Post values and turning them into variables
         $email = $_POST['email'];
         $emailConfirm = $_POST['emailConfirm'];
         $userID = $_POST['userID'];
 
-        if ($email == $emailConfirm){
+        if ($email == $emailConfirm) {
             $emailDone = TRUE;
         }
     }
 }
 
-if(empty($_POST['password']) != empty($_POST['passConfirm']) ){
+if (empty($_POST['password']) != empty($_POST['passConfirm'])) {
     header("location: EditLogin.php?passerr=1");
-}else{
+} else {
 
-    if ($_POST['password'] !== "")
-    {
+    if ($_POST['password'] !== "") {
         //Taking the Post values and turning them into variables
         $password = $_POST['password'];
         $passConfirm = $_POST['passConfirm'];
         $userID = $_POST['userID'];
 
-        if ($password == $passConfirm){
+        if ($password == $passConfirm) {
             $passDone = TRUE;
         }
     }
 }
 
-if($emailDone == TRUE && $passDone == TRUE)
-{
+if ($emailDone == TRUE && $passDone == TRUE) {
+    $hash_pw = password_hash($password, PASSWORD_DEFAULT);
     $stmt = $db->prepare("UPDATE users SET email = ?, password_text = ? WHERE user_ID = ?");
-    $stmt->bind_param("ssi", $email, $password, $userID);
+    $stmt->bind_param("ssi", $email, $hash_pw, $userID);
     $stmt->execute();
     header('location: Admin.php?emailPass=1');
-}elseif ($emailDone == TRUE && $passDone == FALSE)
-{
+} elseif ($emailDone == TRUE && $passDone == FALSE) {
     $stmt = $db->prepare("UPDATE users SET email = ? WHERE user_ID = ?");
     $stmt->bind_param("si", $email, $userID);
     $stmt->execute();
     header('location: Admin.php?email=1');
-}elseif ($emailDone == FALSE && $passDone == TRUE)
-{
+} elseif ($emailDone == FALSE && $passDone == TRUE) {
+    $hash_pw = password_hash($password, PASSWORD_DEFAULT);
     $stmt = $db->prepare("UPDATE users SET password_text = ? WHERE user_ID = ?");
-    $stmt->bind_param("si", $password, $userID);
+    $stmt->bind_param("si", $hash_pw, $userID);
     $stmt->execute();
     header('location: Admin.php?pass=1');
 }

@@ -108,7 +108,7 @@ $results = mysqli_query($db, 'SELECT title, advice, username FROM PreDeparture J
                 </div>
                 <div class="well">
                     <p align="left"><a
-                            href="https://www.prospects.ac.uk/postgraduate-study/professional-qualifications"><b>Professional
+                                href="https://www.prospects.ac.uk/postgraduate-study/professional-qualifications"><b>Professional
                                 Qualifications</b></a></p>
                 </div>
                 <div class="well">
@@ -124,12 +124,12 @@ $results = mysqli_query($db, 'SELECT title, advice, username FROM PreDeparture J
                 </div>
                 <div class="well">
                     <p align="left"><a
-                            href="https://www.ukcisa.org.uk/Information--Advice/Studying--living-in-the-UK/Going-home#layer-5366"><b>Going
+                                href="https://www.ukcisa.org.uk/Information--Advice/Studying--living-in-the-UK/Going-home#layer-5366"><b>Going
                                 Home</b></a></p>
                 </div>
                 <div class="well">
                     <p align="left"><a
-                            href="https://www.farecompare.com/flights/africa/zone.html?utm_medium=cpc&utm_source=bing&utm_campaign=Flights%20to%20%5Be%5D&utm_content=cheap%20flights%20to%20africa%20(exact)&utm_term=cheap%20flights%20to%20africa&email_jobid=v20200311&msclkid=7563ac0e79d31dc7cae2f2652a04fb1c&utm_source=bing&utm_medium=cpc&utm_campaign=Flights%20to%20%5Be%5D&utm_term=cheap%20flights%20to%20africa&utm_content=cheap%20flights%20to%20africa%20(exact)#quote?quoteKey=CABZCJNB20200407R20200414P1CTF"><b>Cheap
+                                href="https://www.farecompare.com/flights/africa/zone.html?utm_medium=cpc&utm_source=bing&utm_campaign=Flights%20to%20%5Be%5D&utm_content=cheap%20flights%20to%20africa%20(exact)&utm_term=cheap%20flights%20to%20africa&email_jobid=v20200311&msclkid=7563ac0e79d31dc7cae2f2652a04fb1c&utm_source=bing&utm_medium=cpc&utm_campaign=Flights%20to%20%5Be%5D&utm_term=cheap%20flights%20to%20africa&utm_content=cheap%20flights%20to%20africa%20(exact)#quote?quoteKey=CABZCJNB20200407R20200414P1CTF"><b>Cheap
                                 Flights To Africa</b></a></p>
                 </div>
                 <div class="well">
@@ -156,12 +156,6 @@ $results = mysqli_query($db, 'SELECT title, advice, username FROM PreDeparture J
                                 Oceania</b></a></p>
                 </div>
             </div>
-            <!--<div class="col-sm-2 sidenav">
-                <p><a href="#">Link</a></p>
-                <p><a href="#">Link</a></p>
-                <p><a href="#">Link</a></p>
-            </div>-->
-
             <div class="col-sm-8 text-left">
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
@@ -248,19 +242,19 @@ $results = mysqli_query($db, 'SELECT title, advice, username FROM PreDeparture J
                     and explore every avenue. Exchange programmes, international student loans, financial support from
                     private companies, and scholarships are some of the main routes you might want to consider. Why not
                     check out <a
-                        href="https://www.rgu.ac.uk/study/international-students/international-fees-costs-funding">RGU</a>'s
+                            href="https://www.rgu.ac.uk/study/international-students/international-fees-costs-funding">RGU</a>'s
                     and <a href="https://www.abdn.ac.uk/study/international/scholarships-and-funding.php">UoA</a>'s
                     Finance and Funding pages for international students?</p>
                 <hr>
                 <h1><b>Professional Courses For You</b></h1>
                 <p align="justify">Have you started planning your next <a
-                        href="https://www.rgu.ac.uk/life-at-rgu/support-advice-services/careers-support">career</a>
+                            href="https://www.rgu.ac.uk/life-at-rgu/support-advice-services/careers-support">career</a>
                     move? Do you want to boost your skills and knowledge, take that first step on the career ladder, <a
-                        href="https://www.findcourses.co.uk/">train</a> and gain professional qualifications e.g <a
-                        href="http://www.ukcisco.org/cisco-courses/certification/cisco-ccna-routing-switching.html"><i>Cisco
+                            href="https://www.findcourses.co.uk/">train</a> and gain professional qualifications e.g <a
+                            href="http://www.ukcisco.org/cisco-courses/certification/cisco-ccna-routing-switching.html"><i>Cisco
                             CCNA </i></a>that will help you stand out from the pool of international students and
                     graduates here in the UK? If yes, then look no further. Just click <a
-                        href="https://www.reed.co.uk/courses/">here</a> to continue your learning with
+                            href="https://www.reed.co.uk/courses/">here</a> to continue your learning with
                     <strong><i>free</i></strong> vast range of professional courses and continuing development (CPD).
                     These are useful for continuing professional development, refreshing your knowledge, or exploring a
                     new area of interest.</p>
@@ -270,13 +264,15 @@ $results = mysqli_query($db, 'SELECT title, advice, username FROM PreDeparture J
                     the European Economic Area, coming to study in the United Kingdom end up planning to remain here
                     after studies. Why? Because, great opportunities to start a new life and a successful career for
                     them abound here in the UK. Although, there are <a
-                        href="https://www.globalcitizensolutions.com/permanent-residence-uk/">guidelines</a> that every
+                            href="https://www.globalcitizensolutions.com/permanent-residence-uk/">guidelines</a> that
+                    every
                     prospective applicant must follow, these rules may be a subject of regular changes.
                     <b><i>ISA</i></b>, advises you to always check the UK Government website for latest updates on <a
-                        href="https://www.gov.uk/browse/citizenship/citizenship">citizenship</a> and <a
-                        href="https://www.gov.uk/browse/visas-immigration/settle-in-the-uk">living permanently</a> in
+                            href="https://www.gov.uk/browse/citizenship/citizenship">citizenship</a> and <a
+                            href="https://www.gov.uk/browse/visas-immigration/settle-in-the-uk">living permanently</a>
+                    in
                     the UK. This <a
-                        href="https://www.studying-in-uk.org/stay-in-uk-after-finishing-your-studies-as-an-international-student/">article</a>
+                            href="https://www.studying-in-uk.org/stay-in-uk-after-finishing-your-studies-as-an-international-student/">article</a>
                     contains some basic information about staying in the UK after finishing your studies as an
                     International Student. People applying for UK citizenship or permanent residency are required to
                     take the <a href="https://www.gov.uk/life-in-the-uk-test">Life in the UK Test</a>.</p>
@@ -289,72 +285,73 @@ $results = mysqli_query($db, 'SELECT title, advice, username FROM PreDeparture J
                     choice based on the continent you will be flying to. You can find flights well within your budget,
                     leaving you extra money to save or spend once you get to your desired destination.</p>
                 <p align="justify">To <b>Africa</b>,<a
-                        href="https://www.farecompare.com/flights/africa/zone.html?utm_medium=cpc&utm_source=bing&utm_campaign=Flights%20to%20%5Be%5D&utm_content=cheap%20flights%20to%20africa%20(exact)&utm_term=cheap%20flights%20to%20africa&email_jobid=v20200311&msclkid=48f0fc2a1c8f1d9fce4da2452fb416d1&utm_source=bing&utm_medium=cpc&utm_campaign=Flights%20to%20%5Be%5D&utm_term=cheap%20flights%20to%20africa&utm_content=cheap%20flights%20to%20africa%20(exact)#quote?quoteKey=CABZCJNB20200407R20200414P1CTF"><i>
+                            href="https://www.farecompare.com/flights/africa/zone.html?utm_medium=cpc&utm_source=bing&utm_campaign=Flights%20to%20%5Be%5D&utm_content=cheap%20flights%20to%20africa%20(exact)&utm_term=cheap%20flights%20to%20africa&email_jobid=v20200311&msclkid=48f0fc2a1c8f1d9fce4da2452fb416d1&utm_source=bing&utm_medium=cpc&utm_campaign=Flights%20to%20%5Be%5D&utm_term=cheap%20flights%20to%20africa&utm_content=cheap%20flights%20to%20africa%20(exact)#quote?quoteKey=CABZCJNB20200407R20200414P1CTF"><i>
                             farecompare</i></a>,<a href="https://www.cheapflights.co.uk/flights/Africa/"><i>
                             cheapflights</i></a>,<a href="https://www.statravel.co.uk/cheap-flights-to-africa.htm"><i>
                             statravel</i></a>,<a
-                        href="https://www.skyscanner.net/flights-to/f/cheap-flights-to-africa.html"><i>
+                            href="https://www.skyscanner.net/flights-to/f/cheap-flights-to-africa.html"><i>
                             skyscanner</i></a> and<a href="https://www.klm.com"><i> klm</i></a> are the topmost sites
                     for booking cheapest flights to Africa.</p>
                 <p align="justify">To <b>Antarctica</b>,<a
-                        href="https://www.skyscanner.net/flights-to/aq/cheap-flights-to-antarctica.html"><i>
+                            href="https://www.skyscanner.net/flights-to/aq/cheap-flights-to-antarctica.html"><i>
                             skyscanner</i></a>,<a
-                        href="https://www.tripadvisor.co.uk/Flights-g12-Antarctica-Cheap_Discount_Airfares.html"><i>
+                            href="https://www.tripadvisor.co.uk/Flights-g12-Antarctica-Cheap_Discount_Airfares.html"><i>
                             tripadvisor</i></a> and<a
-                        href="https://www.expedia.co.uk/Destinations-In-Antarctica.d11700.Flight-Destinations"><i>
+                            href="https://www.expedia.co.uk/Destinations-In-Antarctica.d11700.Flight-Destinations"><i>
                             expedia</i></a> are the topmost sites for booking cheapest flights to Antarctica.</p>
                 <p align="justify">To <b>Asia</b>,<a href="https://www.cheapflights.co.uk/flights/Asia/"><i>
                             cheapflights</i></a>,<a
-                        href="https://www.kayak.co.uk/flight-routes/United-Kingdom-GB0/Asia-AS0"><i> kayak</i></a>,<a
-                        href="https://www.expedia.co.uk/Destinations-In-Asia.d6023099.Flight-Destinations"><i>
+                            href="https://www.kayak.co.uk/flight-routes/United-Kingdom-GB0/Asia-AS0"><i>
+                            kayak</i></a>,<a
+                            href="https://www.expedia.co.uk/Destinations-In-Asia.d6023099.Flight-Destinations"><i>
                             expedia</i></a>,<a
-                        href="https://www.skyscanner.net/flights-to/a/cheap-flights-to-asia.html"><i> skyscanner</i></a>
+                            href="https://www.skyscanner.net/flights-to/a/cheap-flights-to-asia.html"><i> skyscanner</i></a>
                     and<a
-                        href="https://www.farecompare.com/flights/asia/zone.html?utm_medium=cpc&utm_source=bing&utm_campaign=Flights%20to%20%5Be%5D&utm_content=cheap%20flights%20to%20asia%20(exact)&utm_term=cheap%20flights%20to%20asia&email_jobid=v20200311&msclkid=74607e12d81d1ae6e817207de07349d4&utm_source=bing&utm_medium=cpc&utm_campaign=Flights%20to%20%5Be%5D&utm_term=cheap%20flights%20to%20asia&utm_content=cheap%20flights%20to%20asia%20(exact)#quote?quoteKey=CABZCTYO20200407R20200414P1CTF"><i>
+                            href="https://www.farecompare.com/flights/asia/zone.html?utm_medium=cpc&utm_source=bing&utm_campaign=Flights%20to%20%5Be%5D&utm_content=cheap%20flights%20to%20asia%20(exact)&utm_term=cheap%20flights%20to%20asia&email_jobid=v20200311&msclkid=74607e12d81d1ae6e817207de07349d4&utm_source=bing&utm_medium=cpc&utm_campaign=Flights%20to%20%5Be%5D&utm_term=cheap%20flights%20to%20asia&utm_content=cheap%20flights%20to%20asia%20(exact)#quote?quoteKey=CABZCTYO20200407R20200414P1CTF"><i>
                             farecompare</i></a> are the topmost sites for booking cheapest flights to Asia.</p>
                 <p align="justify">To <b>Europe</b>,<a href="https://www.jetcost.co.uk/"><i> jetcost</i></a>,<a
-                        href="https://www.cheapflights.co.uk/flights/Europe/"><i> cheapflights</i></a>,<a
-                        href="https://www.skyscanner.net/flights-to/e/cheap-flights-to-europe.html"><i>
+                            href="https://www.cheapflights.co.uk/flights/Europe/"><i> cheapflights</i></a>,<a
+                            href="https://www.skyscanner.net/flights-to/e/cheap-flights-to-europe.html"><i>
                             skyscanner</i></a>,<a
-                        href="https://www.expedia.co.uk/Destinations-In-Europe.d6022967.Flight-Destinations"><i>
+                            href="https://www.expedia.co.uk/Destinations-In-Europe.d6022967.Flight-Destinations"><i>
                             expedia</i></a>,<a
-                        href="https://www.kayak.co.uk/flight-routes/United-Kingdom-GB0/Europe-EU0"><i> kayak</i></a>,<a
-                        href="https://www.lastminute.com/flights/cheap-flights-to-europe.html"><i> lastminute</i></a>
+                            href="https://www.kayak.co.uk/flight-routes/United-Kingdom-GB0/Europe-EU0"><i> kayak</i></a>,<a
+                            href="https://www.lastminute.com/flights/cheap-flights-to-europe.html"><i>
+                            lastminute</i></a>
                     and<a
-                        href="https://www.omio.com/distil_r_captcha.html?httpReferrer=/flights/cheap-flights-to-europe"><i>
+                            href="https://www.omio.com/distil_r_captcha.html?httpReferrer=/flights/cheap-flights-to-europe"><i>
                             omio</i></a> are the topmost sites for booking cheapest flights to Europe.</p>
                 <p align="justify">To <b>South America</b>,<a
-                        href="https://www.cheapflights.co.uk/flights/South-America/"><i> cheapflights</i></a>,<a
-                        href="https://www.skyscanner.net/flights-to/s/cheap-flights-to-south-america.html"><i>
+                            href="https://www.cheapflights.co.uk/flights/South-America/"><i> cheapflights</i></a>,<a
+                            href="https://www.skyscanner.net/flights-to/s/cheap-flights-to-south-america.html"><i>
                             skyscanner</i></a>,<a
-                        href="https://www.expedia.co.uk/Destinations-In-South-America.d6023117.Flight-Destinations"><i>
+                            href="https://www.expedia.co.uk/Destinations-In-South-America.d6023117.Flight-Destinations"><i>
                             expedia</i></a> and<a
-                        href="https://www.farecompare.com/flights/southamerica/zone.html#quote?quoteKey=CABZCSAO20200407R20200414P1CTF"><i>
+                            href="https://www.farecompare.com/flights/southamerica/zone.html#quote?quoteKey=CABZCSAO20200407R20200414P1CTF"><i>
                             farecompare</i></a> are the topmost sites for booking cheapest flights to South America.</p>
                 <p align="justify">To <b>North America</b>,<a
-                        href="https://www.cheapflights.co.uk/flights/North-America/"><i> cheapflights</i></a>,<a
-                        href="https://www.skyscanner.net/flights-to/n/cheap-flights-to-north-america.html"><i>
+                            href="https://www.cheapflights.co.uk/flights/North-America/"><i> cheapflights</i></a>,<a
+                            href="https://www.skyscanner.net/flights-to/n/cheap-flights-to-north-america.html"><i>
                             skyscanner</i></a>,<a
-                        href="https://www.expedia.co.uk/Destinations-In-North-America.d500001.Flight-Destinations"><i>
+                            href="https://www.expedia.co.uk/Destinations-In-North-America.d500001.Flight-Destinations"><i>
                             expedia</i></a>,<a href="https://www.statravel.co.uk/cheap-flights-to-north-america.htm"><i>
                             statravel</i></a> and<a href="https://www.globehunters.com/north-america/flights.htm"><i>
                             globehunters</i></a> are the topmost sites for booking cheapest flights to North America.
                 </p>
                 <p align="justify">To <b>Oceania</b>,<a href="https://www.cheapflights.co.uk/flights/Oceania/"><i>
                             cheapflights</i></a>,<a
-                        href="https://www.skyscanner.net/flights-to/o/cheap-flights-to-oceania.html"><i> skyscanner</i></a>
+                            href="https://www.skyscanner.net/flights-to/o/cheap-flights-to-oceania.html"><i>
+                            skyscanner</i></a>
                     and<a href="https://www.globehunters.com/oceania/flights.htm"><i> globehunters</i></a> are the
                     topmost sites for booking cheapest flights to Oceania.</p></p>
                 <hr>
-                <!--    <h3>*****For The Crowdsourcing*****</h3>
-                    <p>Mike, over to you....Keeping To My Words-)</p> -->
 
             </div>
             <div class="col-sm-2 sidenav">
                 <label for="Latest News">Latest News</label>
                 <div class="well">
                     <p align="right"><a
-                            href="https://www.gov.uk/government/topical-events/coronavirus-covid-19-uk-government-response"><b>Coronavirus
+                                href="https://www.gov.uk/government/topical-events/coronavirus-covid-19-uk-government-response"><b>Coronavirus
                                 (COVID-19): UK Government Response</b></a></p>
                 </div>
                 <div class="well">
@@ -375,7 +372,7 @@ $results = mysqli_query($db, 'SELECT title, advice, username FROM PreDeparture J
                 </div>
                 <div class="well">
                     <p align="right"><a
-                            href="https://www.gov.uk/search/news-and-communications?organisations%5B%5D=uk-visas-and-immigration&parent=uk-visas-and-immigration"><b>UKVI
+                                href="https://www.gov.uk/search/news-and-communications?organisations%5B%5D=uk-visas-and-immigration&parent=uk-visas-and-immigration"><b>UKVI
                                 News & Communications</b></a></p>
                 </div>
                 <div class="well">
@@ -468,7 +465,7 @@ $results = mysqli_query($db, 'SELECT title, advice, username FROM PreDeparture J
     </div>
 
     <footer class="container-fluid text-center">
-        <!-- <p>Copyright @ ISA 2020</p> -->
+
     </footer>
 </body>
 </html>

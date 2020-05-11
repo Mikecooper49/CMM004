@@ -42,7 +42,7 @@ $email = ($_SESSION['email']);
                         <select name="Gender" id="Gender">
                             <?php
                             // some options of the 58 in Facebook !
-                            $Gender = array("Rather not say", "Non-Binary", "Male", "Female", "Bigender", "Gender Fluid", "Trans", "Agender");
+                            $Gender = array("", "Rather not say", "Non-Binary", "Male", "Female", "Bigender", "Gender Fluid", "Trans", "Agender");
                             foreach ($Gender as $item) {
                                 ?>
                                 <option value="<?php echo $item; ?>"><?php echo $item; ?></option>
@@ -53,7 +53,7 @@ $email = ($_SESSION['email']);
                     </div>
                     <div class="form-row">
                         <label for="Age">Age: </label><br>
-                        <input type="number" maxlength="2" minlength="1" name="Age" id="Age" placeholder="">
+                        <input type="number" maxlength="2" name="Age" id="Age" placeholder="">
                     </div>
                     <div class="form-row">
                         <label for="Uni">University/College: </label> <br>
@@ -61,7 +61,7 @@ $email = ($_SESSION['email']);
                         <select name="Uni" id="Uni">
                             <?php
                             // Higher Education Institutions in the ABZ area
-                            $Uni = array("Robert Gordon University", "Robert Gordon University - Gray's School of Art", "University of Aberdeen", "North East Scotland College", "Robert Gordon College", "Cornhill Community Learning Centre", "Institute of Dentistry", "Scottish Agriculture College");
+                            $Uni = array("", "Robert Gordon University", "Robert Gordon University - Gray's School of Art", "University of Aberdeen", "North East Scotland College", "Robert Gordon College", "Cornhill Community Learning Centre", "Institute of Dentistry", "Scottish Agriculture College");
                             foreach ($Uni as $item) {
                                 ?>
                                 <option value="<?php echo $item; ?>"><?php echo $item; ?></option>
@@ -72,16 +72,17 @@ $email = ($_SESSION['email']);
                     </div>
                     <div class="form-row">
                         <label for="Course">Course: </label><br>
-                        <input type="text" name="Course" id="Course" placeholder="Course/studies">
+                        <input type="text" name="Course" id="Course" placeholder="">
                     </div>
                     <br><br>
                     <div class="form-row">
                         <input type="submit" value="Submit Profile" class="btn btn-primary">
+                        <!--check to see if any profile data has been entered -->
 
                         <br><br>
                     </div>
                 </form>
-                <form action="index_nav.php">
+                <form action="index.php">
                     <input type="submit" value="Cancel (back to homepage)" name="Submit" id="frm1_submit"
                            class="btn btn-primary"/>
                 </form>

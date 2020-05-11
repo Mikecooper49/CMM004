@@ -29,7 +29,7 @@ $results = mysqli_query($db, 'SELECT title, advice, username FROM PreArrival JOI
     <div class="collapse navbar-collapse" id="main-navigation">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="index_nav.php">Home</a>
+                <a class="nav-link" href="index.php">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="old code/PreArrival.html">PreArrival</a>
@@ -70,9 +70,12 @@ $results = mysqli_query($db, 'SELECT title, advice, username FROM PreArrival JOI
     <div class="description">
         <h1 class="display-1">Welcome to Aberdeen</h1>
         <h2>This website was created for International Students</h2>
-        <!-- Buddy Up link to PHP and database-->
-        <button type="button" class="btn btn-secondary btn-lg">Sign-Up</button>
-        <button type="button" class="btn btn-secondary btn-lg">Buddy Up</button>
+        <!-- Buddy Up  and register buttons-->
+        <!--   <input type="button" value="Register" class="btn btn-primary"
+                  onclick="window.location.href='Profile_form.php';"/>
+
+           <input type="button" value="Connect with others" class="btn btn-primary"
+                  onclick="window.location.href='connecttwo.php';"/> -->
 
     </div>
     <!-- BOOTSTRAP GRIDS, EACH GRID MUST ADD UP TO 12 -->

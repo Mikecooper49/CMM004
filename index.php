@@ -60,7 +60,11 @@ include('resources/includes/navbarLogic.php');
                 <figure>
                     <img src="resources/images/login2.jpg" alt="PhotoOfRGUInt'lStudents"
                          style="width:100%">
+                    <h3><a href="register.php"><b> Register to enter a profile,
+                                connect to other users and enter local information (click here)</b></a></h3>
                 </figure>
+                <hr>
+                <br>
                 <h1>Welcome</h1>
                 <p>Welcome to the International Students of Aberdeen (ISa). Our hope is that this site
                     will
@@ -112,9 +116,9 @@ include('resources/includes/navbarLogic.php');
 </div>
 <footer class="page-footer font-small black">
     <div class="footer-copyright text-center py-3">© <?php echo date('Y'); ?> Copyright:
-            Aberdeen International Student Directory
-        </div>
-    </footer>
+        Aberdeen International Student Directory
+    </div>
+</footer>
 
 </body>
 </html>

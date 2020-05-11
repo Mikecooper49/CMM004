@@ -47,7 +47,8 @@ $results = mysqli_query($db, 'SELECT title, advice, username FROM onarrival JOIN
                         </li>
                         <li class="list-group-item"><a href="https://www.rgu.ac.uk/"> Robert Gordon University</a></li>
                         <li class="list-group-item"><a href="https://www.abdn.ac.uk/"> University of Aberdeen</a></li>
-                        <li class="list-group-item"><a href="https://www.google.com/maps/@57.1401561,-2.1010407,14z"> My Map</a></li>
+                        <li class="list-group-item"><a href="https://www.google.com/maps/@57.1401561,-2.1010407,14z"> My
+                                Map</a></li>
                     </ul>
                 </div>
             </div>
@@ -62,11 +63,13 @@ $results = mysqli_query($db, 'SELECT title, advice, username FROM onarrival JOIN
 
                     <div class="carousel-inner">
                         <div class="item active">
-                            <img src="resources/images/union_street_image.png" alt="Caption of Union Street" style="width:100%;">
+                            <img src="resources/images/union_street_image.png" alt="Caption of Union Street"
+                                 style="width:100%;">
                         </div>
 
                         <div class="item">
-                            <img src="resources/images/SunsetAberdeenbeach.jpg" alt="Aberdeen Beach at Sunset" style="width:100%;">
+                            <img src="resources/images/SunsetAberdeenbeach.jpg" alt="Aberdeen Beach at Sunset"
+                                 style="width:100%;">
                         </div>
 
                         <div class="item">
@@ -89,11 +92,16 @@ $results = mysqli_query($db, 'SELECT title, advice, username FROM onarrival JOIN
 
                 <h1>Welcome to Aberdeen</h1>
                 <p>
-                    Aberdeen is Scotland's third most populous city and the United Kingdom's 39th most populous built-up area. Since the discovery of North Sea oil in the 1970s, Aberdeen has been known as the off-shore oil capital of Europe.The area around Aberdeen has been settled for at least 8,000 years when prehistoric villages lay around the mouths of the rivers Dee and Don. The city has a long, sandy coastline and a marine climate, the latter resulting in chilly summers and mild winters.
+                    Aberdeen is Scotland's third most populous city and the United Kingdom's 39th most populous built-up
+                    area. Since the discovery of North Sea oil in the 1970s, Aberdeen has been known as the off-shore
+                    oil capital of Europe.The area around Aberdeen has been settled for at least 8,000 years when
+                    prehistoric villages lay around the mouths of the rivers Dee and Don. The city has a long, sandy
+                    coastline and a marine climate, the latter resulting in chilly summers and mild winters.
                 </p>
                 <hr>
                 <div class="row">
-                    <h4> <b>Local Malls</b> </h4> <hr>
+                    <h4><b>Local Malls</b></h4>
+                    <hr>
                     <div class="col-md-3">
                         <a href="https://www.unionsquareaberdeen.com">
                             <img src="resources/images/unionsquare.png">
@@ -117,7 +125,8 @@ $results = mysqli_query($db, 'SELECT title, advice, username FROM onarrival JOIN
                 </div>
                 <hr>
                 <div class="row">
-                    <h4> <b>Local Supermarkets</b> </h4> <hr>
+                    <h4><b>Local Supermarkets</b></h4>
+                    <hr>
                     <div class="col-md-3">
                         <a href="https://www.asda.com/">
                             <img src="resources/images/asda.png">
@@ -141,7 +150,8 @@ $results = mysqli_query($db, 'SELECT title, advice, username FROM onarrival JOIN
                 </div>
                 <hr>
                 <div class="row">
-                    <h4> <b>Local Bus Services</b> </h4> <hr>
+                    <h4><b>Local Bus Services</b></h4>
+                    <hr>
                     <div class="col-md-3">
                         <a href="https://www.firstgroup.com/aberdeen">
                             <img src="resources/images/firstbus.png">
@@ -180,55 +190,49 @@ $results = mysqli_query($db, 'SELECT title, advice, username FROM onarrival JOIN
             <p> Crowd Source Information - <a data-toggle="modal" data-target="#myModal" href="javascript:;"> Add
                     new </a></p>
             <table class="table table-bordered">
-                <?php while($row = mysqli_fetch_array($results)){ ?>
-                            <tr>
-                                <td>
-                                    <b>
-                                        <?php echo $row['title'];?> </b><br>
-                                    <i> <?php echo "Submitted by: " . $row['username'];?></i> <br>
-                                    <?php echo $row['advice']; ?>
-                                </td>
-                            </tr>
-                        <?php } ?>
-                    </table>
+                <?php while ($row = mysqli_fetch_array($results)) { ?>
+                    <tr>
+                        <td>
+                            <b>
+                                <?php echo $row['title']; ?> </b><br>
+                            <i> <?php echo "Submitted by: " . $row['username']; ?></i> <br>
+                            <?php echo $row['advice']; ?>
+                        </td>
+                    </tr>
+                <?php } ?>
+            </table>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title"> Add Information </h4>
+                </div>
+                <div class="modal-body">
+                    <form action="OnArrivalCrowd.php" method="post">
+                        <div class="form-group">
+                            <label for="pwd">Title:</label>
+                            <input class="form-control" name="title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Information:</label>
+                            <textarea class="form-control" rows="6" id="pwd" name="information" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
-    <!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
 
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title"> Add Information </h4>
-            </div>
-            <div class="modal-body">
-                <form action="OnArrivalCrowd.php" method="post">
-                    <div class="form-group">
-                        <label for="pwd">Title:</label>
-                        <input class="form-control" name="title" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="pwd">Information:</label>
-                        <textarea class="form-control" rows="6" id="pwd" name="information" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
         </div>
-
     </div>
-</div>
 
-    <!-- Footer -->
-    <!--<footer class="page-footer font-small black">
-    <div class="footer-copyright text-center py-3">© <?php echo date('Y'); ?> Copyright:
-        Aberdeen International Student Directory
-    </div>
-</footer> -->
 </body>
 </html>

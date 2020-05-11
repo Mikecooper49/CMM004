@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("resources/includes/config_lynne.php");
+include("resources/includes/config_home.php");
 
 // Checking that all fields have been filled
 if (empty($_POST['email']) || $_POST['password'] == "" || $_POST['confirm'] == "" || $_POST['username'] == "") {
@@ -34,7 +34,6 @@ if (mysqli_num_rows($result) == 1) {
     if ($password == $confirm) {
 
         //Inserting the new user details into the database
-        //$sql_query = "INSERT INTO users(email, password_text, user_type) VALUES ('$email', '$password', '$userType')";
 
         $stmt = $db->prepare("INSERT INTO users(email, password_text, username, firstname, lastname, nationality, user_type) VALUES(?, ?, ?, ?, ?, ?, ?)");
         $stmt->bind_param("sssssss", $email, $hash_pw, $username, $firstname, $lastname, $nationality, $userType);
@@ -46,13 +45,6 @@ if (mysqli_num_rows($result) == 1) {
             echo "Error: " . $stmt . "<br>" . mysqli_error($db);
         }
 
-        //If the insert query is successful redirect the user to the index page
-        # if ($db->query($sql_query) == TRUE){
-
-        #}
-        #else {
-        #   echo "Error: " . $sql_query . "<br>" . $db->error;
-        #}
 
     } else {
         //If the passwords do not match, echo out this message

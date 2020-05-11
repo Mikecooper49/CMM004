@@ -15,7 +15,6 @@ session_start();
 
 </head>
 
-
 <body class="bg_login">
 
 <!-- login box and check/set login cookie -->

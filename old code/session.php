@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['email'] = $email;
         $_SESSION['password'] = $password;
         $_SESSION['username'] = $username;
-        header('Location:index_nav.php', true, 301);
+        header('Location:index.php', true, 301);
         //exit();
     } else {
         // set login fail message

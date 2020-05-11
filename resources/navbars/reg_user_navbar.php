@@ -4,10 +4,8 @@
 Created  for module CMM004
 Date: March 2020
 
-user_navbar.html - unregistered (visitor)  user navigation bar
-
+user_navbar.html - registered user navigation bar
 -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,12 +18,11 @@ user_navbar.html - unregistered (visitor)  user navigation bar
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
             </button>
-            <!--   <a class="navbar-brand" href="">Logo</a> -->
             <img src="resources/images/ISAlogoTransparent_nav.png" alt="ISA Logo">
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="index_nav.php">Home</a></li>
+                <li class="active"><a href="index.php">Home</a></li>
                 <li class="active"><a href="PreArrival.php">PreArrival</a></li>
                 <li class="active"><a href="OnArrival_nav.php">OnArrival</a></li>
                 <li class="active"><a href="PreDeparture_nav.php">PreDeparture</a></li>

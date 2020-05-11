@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['usertype'] = $usertype_hash;
             $_SESSION['email'] = $email;
             $_SESSION['username'] = $username_hash;
-            header('Location:index_nav.php', true, 301);
+            header('Location:index.php', true, 301);
         } else {
             $_SESSION['message'] = "Sorry your login has failed please try again";
             session_destroy();
